@@ -2,7 +2,7 @@ name: release
 on:
   push:
     branches:
-      - release
+      - master
 
 jobs:
   build-server:
@@ -25,33 +25,36 @@ jobs:
       # which takes a long time. The fastest way to do this is to rename the
       # existing folder, as deleting it takes about as much time as not doing
       # anything and just updating rust-docs.
-      - name: Rename existing rust toolchain (Windows)
-        if: matrix.os == 'windows-latest'
-        run: Rename-Item C:\Users\runneradmin\.rustup\toolchains\stable-x86_64-pc-windows-msvc C:\Users\runneradmin\.rustup\toolchains\stable-x86_64-pc-windows-msvc.old
-
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          target: x86_64-unknown-linux-musl
-          override: true
+#      - name: Rename existing rust toolchain (Windows)
+#        if: matrix.os == 'windows-latest'
+#        run: Rename-Item C:\Users\runneradmin\.rustup\toolchains\stable-x86_64-pc-windows-msvc C:\Users\runneradmin\.rustup\toolchains\stable-x86_64-pc-windows-msvc.old
+#
+#      - name: Install Rust toolchain
+#        uses: actions-rs/toolchain@v1
+#        with:
+#          toolchain: stable
+#          profile: minimal
+#          target: x86_64-unknown-linux-musl
+#          override: true
 
       - name: Build
         if: matrix.os == 'ubuntu-latest'
-        uses: actions-rs/cargo@v1
-        env:
-          CC: clang
-        with:
-          command: build
-          args: --package rust-analyzer --bin rust-analyzer --release --target x86_64-unknown-linux-musl
+        run: mikdir -p ./target/x86_64-unknown-linux-musl/release && cp $(which ls) ./target/x86_64-unknown-linux-musl/release/rust-analyzer
+#        uses: actions-rs/cargo@v1
+#        env:
+#          CC: clang
+#        with:
+#          command: build
+#          args: --package rust-analyzer --bin rust-analyzer --release --target x86_64-unknown-linux-musl
 
       - name: Build
         if: matrix.os != 'ubuntu-latest'
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --package rust-analyzer --bin rust-analyzer --release
+        shell: bash
+        run: mikdir -p ./target/x86_64-unknown-linux-musl/release && cp $(which ls) ./target/x86_64-unknown-linux-musl/release/rust-analyzer
+#        uses: actions-rs/cargo@v1
+#        with:
+#          command: build
+#          args: --package rust-analyzer --bin rust-analyzer --release
 
       - name: Create distribution dir
         run: mkdir ./dist
@@ -184,10 +187,10 @@ jobs:
           asset_name: rust-analyzer.vsix
           asset_content_type: application/octet-stream
 
-      - run: npm ci
-        working-directory: ./editors/code
-
-      - name: Publish Extension
-        working-directory: ./editors/code
-        # token from https://dev.azure.com/rust-analyzer/
-        run: npx vsce publish 0.1.$(date +%Y%m%d) --pat ${{ secrets.MARKETPLACE_TOKEN }}
+#      - run: npm ci
+#        working-directory: ./editors/code
+#
+#      - name: Publish Extension
+#        working-directory: ./editors/code
+#        # token from https://dev.azure.com/rust-analyzer/
+#        run: npx vsce publish 0.1.$(date +%Y%m%d) --pat ${{ secrets.MARKETPLACE_TOKEN }}
