@@ -145,23 +145,24 @@ impl RootDatabase {
         let _p = profile("RootDatabase::collect_garbage");
         self.last_gc = crate::wasm_shims::Instant::now();
 
-        let sweep = SweepStrategy::default().discard_values().sweep_all_revisions();
+        // TODO
+        let _sweep = SweepStrategy::default().discard_values().sweep_all_revisions();
 
-        self.query(ra_db::ParseQuery).sweep(sweep);
-        self.query(hir::db::ParseMacroQuery).sweep(sweep);
+        // self.query(ra_db::ParseQuery).sweep(sweep);
+        // self.query(hir::db::ParseMacroQuery).sweep(sweep);
 
-        // Macros do take significant space, but less then the syntax trees
-        // self.query(hir::db::MacroDefQuery).sweep(sweep);
-        // self.query(hir::db::MacroArgQuery).sweep(sweep);
-        // self.query(hir::db::MacroExpandQuery).sweep(sweep);
+        // // Macros do take significant space, but less then the syntax trees
+        // // self.query(hir::db::MacroDefQuery).sweep(sweep);
+        // // self.query(hir::db::MacroArgQuery).sweep(sweep);
+        // // self.query(hir::db::MacroExpandQuery).sweep(sweep);
 
-        self.query(hir::db::AstIdMapQuery).sweep(sweep);
+        // self.query(hir::db::AstIdMapQuery).sweep(sweep);
 
-        self.query(hir::db::BodyWithSourceMapQuery).sweep(sweep);
+        // self.query(hir::db::BodyWithSourceMapQuery).sweep(sweep);
 
-        self.query(hir::db::ExprScopesQuery).sweep(sweep);
-        self.query(hir::db::InferQueryQuery).sweep(sweep);
-        self.query(hir::db::BodyQuery).sweep(sweep);
+        // self.query(hir::db::ExprScopesQuery).sweep(sweep);
+        // self.query(hir::db::InferQueryQuery).sweep(sweep);
+        // self.query(hir::db::BodyQuery).sweep(sweep);
     }
 
     pub fn per_query_memory_usage(&mut self) -> Vec<(String, Bytes)> {
@@ -170,14 +171,14 @@ impl RootDatabase {
         macro_rules! sweep_each_query {
             ($($q:path)*) => {$(
                 let before = memory_usage().allocated;
-                self.query($q).sweep(sweep);
+                $q.in_db(self).sweep(sweep);
                 let after = memory_usage().allocated;
                 let q: $q = Default::default();
                 let name = format!("{:?}", q);
                 acc.push((name, before - after));
 
                 let before = memory_usage().allocated;
-                self.query($q).sweep(sweep.discard_everything());
+                $q.in_db(self).sweep(sweep.discard_everything());
                 let after = memory_usage().allocated;
                 let q: $q = Default::default();
                 let name = format!("{:?} (deps)", q);
@@ -252,7 +253,7 @@ impl RootDatabase {
         // write.
         // We do this after collecting the non-interned queries to correctly attribute memory used
         // by interned data.
-        self.runtime.synthetic_write(Durability::HIGH);
+        self.salsa_runtime_mut().synthetic_write(Durability::HIGH);
 
         sweep_each_query![
             // AstDatabase

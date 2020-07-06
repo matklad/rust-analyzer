@@ -18,5 +18,6 @@ jemallocator = { version = "0.3.2", optional = true }
 jemalloc-ctl = { version = "0.3.3", optional = true }
 
 [features]
+default = ["jemalloc"]
 jemalloc = [ "jemallocator", "jemalloc-ctl" ]
 cpu_profiler = []
