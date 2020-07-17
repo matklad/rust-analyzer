@@ -1491,7 +1491,7 @@ checksum = "71d301d4193d031abdd79ff7e3dd721168a9572ef3fe51a1517aba235bd8f86e"
 [[package]]
 name = "salsa"
 version = "0.14.3"
-source = "git+https://github.com/nikomatsakis/salsa?branch=dynamic-databases-rfc#fd036a4f154c46253443b3a79b6f4400c40e87b1"
+source = "git+https://github.com/salsa-rs/salsa?rev=b66eb8131191a12ba9d2a0b14760d8f0b60bdffd#b66eb8131191a12ba9d2a0b14760d8f0b60bdffd"
 dependencies = [
  "crossbeam-utils",
  "indexmap",
@@ -1507,7 +1507,7 @@ dependencies = [
 [[package]]
 name = "salsa-macros"
 version = "0.14.1"
-source = "git+https://github.com/nikomatsakis/salsa?branch=dynamic-databases-rfc#fd036a4f154c46253443b3a79b6f4400c40e87b1"
+source = "git+https://github.com/salsa-rs/salsa?rev=b66eb8131191a12ba9d2a0b14760d8f0b60bdffd#b66eb8131191a12ba9d2a0b14760d8f0b60bdffd"
 dependencies = [
  "heck",
  "proc-macro2",
