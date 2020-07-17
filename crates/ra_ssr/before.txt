@@ -1,0 +1,2003 @@
+  Lines           Copies        Function name
+  -----           ------        -------------
+  1307311 (100%)  45496 (100%)  (TOTAL)
+    76726 (5.9%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::read_upgrade
+    72956 (5.6%)    102 (0.2%)  salsa::derived::slot::Slot<Q,MP>::probe
+    66233 (5.1%)   4735 (10.4%) core::ptr::drop_in_place
+    29700 (2.3%)    110 (0.2%)  indexmap::map::OrderMapCore<K,V>::double_capacity
+    28380 (2.2%)    220 (0.5%)  indexmap::map::OrderMapCore<K,V>::reinsert_entry_in_order
+    27543 (2.1%)    401 (0.9%)  core::option::Option<T>::map
+    25856 (2.0%)     51 (0.1%)  salsa::derived::slot::PanicGuard<Q,MP>::overwrite_placeholder
+    25470 (1.9%)    110 (0.2%)  indexmap::map::OrderMapCore<K,V>::entry_phase_1
+    23494 (1.8%)    299 (0.7%)  core::option::Option<T>::ok_or_else
+    22275 (1.7%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::grow_amortized
+    20460 (1.6%)    110 (0.2%)  indexmap::map::OrderMapCore<K,V>::find_using_impl
+    17848 (1.4%)    194 (0.4%)  core::alloc::layout::Layout::array
+    15447 (1.2%)    271 (0.6%)  alloc::raw_vec::RawVec<T,A>::current_memory
+    14996 (1.1%)     46 (0.1%)  smallvec::SmallVec<A>::try_grow
+    14824 (1.1%)    264 (0.6%)  core::ptr::swap_nonoverlapping_one
+    14739 (1.1%)     51 (0.1%)  salsa::lru::Lru<Node>::record_use
+    13428 (1.0%)     51 (0.1%)  salsa::runtime::Runtime::execute_query_implementation
+    13107 (1.0%)     51 (0.1%)  salsa::lru::LruData<Node>::insert_new
+    12964 (1.0%)    118 (0.3%)  alloc::sync::Arc<T>::new
+    12940 (1.0%)    280 (0.6%)  <alloc::sync::Weak<T> as core::ops::drop::Drop>::drop
+    12817 (1.0%)    103 (0.2%)  core::iter::traits::iterator::Iterator::try_fold
+    12424 (1.0%)     51 (0.1%)  <salsa::derived::DerivedStorage<Q,MP> as salsa::plumbing::QueryStorageOps<Q>>::try_fetch
+    11628 (0.9%)     51 (0.1%)  salsa::lru::LruData<Node>::promote_yellow_to_green
+    11550 (0.9%)     66 (0.1%)  hashbrown::raw::RawTable<T>::find
+    11296 (0.9%)    280 (0.6%)  alloc::sync::Weak<T>::inner
+    11284 (0.9%)    364 (0.8%)  core::fmt::ArgumentV1::new
+     9909 (0.8%)    187 (0.4%)  core::option::Option<T>::unwrap_or_else
+     9160 (0.7%)    110 (0.2%)  indexmap::map::VacantEntry<K,V>::insert_impl
+     9129 (0.7%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::register_with_in_progress_thread
+     8761 (0.7%)     17 (0.0%)  salsa::interned::InternedStorage<Q>::intern_index
+     8670 (0.7%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::read
+     8401 (0.6%)    271 (0.6%)  core::ptr::slice_from_raw_parts_mut
+     8370 (0.6%)    270 (0.6%)  <alloc::raw_vec::RawVec<T,A> as core::ops::drop::Drop>::drop
+     8271 (0.6%)     51 (0.1%)  salsa::derived::DerivedStorage<Q,MP>::slot
+     8193 (0.6%)    113 (0.2%)  core::result::Result<T,E>::unwrap_or_else
+     7867 (0.6%)     75 (0.2%)  <core::iter::adapters::zip::Zip<A,B> as core::iter::adapters::zip::ZipImpl<A,B>>::next
+     7688 (0.6%)    248 (0.5%)  core::ptr::slice_from_raw_parts
+     7625 (0.6%)     61 (0.1%)  alloc::raw_vec::RawVec<T,A>::allocate_in
+     7535 (0.6%)     55 (0.1%)  alloc::raw_vec::RawVec<T,A>::grow_exact
+     7388 (0.6%)    132 (0.3%)  alloc::vec::Vec<T>::push
+     7370 (0.6%)     22 (0.0%)  hashbrown::raw::RawTable<T>::rehash_in_place
+     7038 (0.5%)     51 (0.1%)  salsa::lru::LruData<Node>::promote_red_to_green
+     6762 (0.5%)    191 (0.4%)  <alloc::vec::Vec<T> as core::ops::index::Index<I>>::index
+     6746 (0.5%)    318 (0.7%)  core::ptr::read
+     6744 (0.5%)    281 (0.6%)  core::alloc::layout::Layout::for_value
+     5927 (0.5%)    219 (0.5%)  core::mem::replace
+     5916 (0.5%)     51 (0.1%)  salsa::lru::LruData<Node>::record_use
+     5906 (0.5%)     46 (0.1%)  salsa::blocking_future::BlockingFuture<T>::wait
+     5670 (0.4%)    510 (1.1%)  salsa::derived::slot::Slot<Q,MP>::probe::{{closure}}
+     5562 (0.4%)     51 (0.1%)  indexmap::map::Entry<K,V>::or_insert_with
+     5537 (0.4%)     49 (0.1%)  salsa::blocking_future::Promise<T>::transition
+     5390 (0.4%)    110 (0.2%)  indexmap::map::OrderMapCore<K,V>::insert_phase_2
+     5265 (0.4%)    585 (1.3%)  core::mem::size_of
+     5126 (0.4%)     22 (0.0%)  hashbrown::raw::RawTable<T>::resize
+     5101 (0.4%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::new
+     4840 (0.4%)     55 (0.1%)  indexmap::map::OrderMapCore<K,V>::first_allocation
+     4619 (0.4%)    129 (0.3%)  alloc::alloc::box_free
+     4543 (0.3%)     59 (0.1%)  <hashbrown::raw::RawIterRange<T> as core::iter::traits::iterator::Iterator>::next
+     4530 (0.3%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::read_upgrade::{{closure}}
+     4400 (0.3%)    110 (0.2%)  indexmap::map::IndexMap<K,V,S>::entry_phase_1
+     4361 (0.3%)     89 (0.2%)  salsa::QueryTable<Q>::get::{{closure}}
+     4350 (0.3%)     75 (0.2%)  <core::iter::adapters::zip::Zip<A,B> as core::iter::adapters::zip::ZipImpl<A,B>>::new
+     4295 (0.3%)    280 (0.6%)  alloc::sync::Arc<T>::drop_slow
+     4293 (0.3%)     55 (0.1%)  indexmap::map::VacantEntry<K,V>::insert
+     4224 (0.3%)    280 (0.6%)  <alloc::sync::Arc<T> as core::ops::drop::Drop>::drop
+     4185 (0.3%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::reserve
+     4182 (0.3%)    123 (0.3%)  <alloc::vec::Vec<T> as core::ops::index::IndexMut<I>>::index_mut
+     4172 (0.3%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::evict
+     4070 (0.3%)     22 (0.0%)  hashbrown::raw::RawTable<T>::new_uninitialized
+     4068 (0.3%)     85 (0.2%)  core::slice::<impl [T]>::iter
+     3894 (0.3%)     22 (0.0%)  hashbrown::raw::RawTable<T>::try_with_capacity
+     3835 (0.3%)     59 (0.1%)  <hashbrown::raw::RawTable<T> as core::ops::drop::Drop>::drop
+     3726 (0.3%)     46 (0.1%)  smallvec::SmallVec<A>::try_reserve
+     3681 (0.3%)     51 (0.1%)  <salsa::derived::slot::Slot<Q,MP> as core::fmt::Debug>::fmt
+     3680 (0.3%)     46 (0.1%)  <smallvec::IntoIter<A> as core::ops::drop::Drop>::drop
+     3639 (0.3%)     52 (0.1%)  core::result::Result<T,E>::map_err
+     3572 (0.3%)     42 (0.1%)  <core::option::Option<T> as core::cmp::PartialEq>::eq
+     3570 (0.3%)     51 (0.1%)  salsa::derived::slot::PanicGuard<Q,MP>::proceed
+     3549 (0.3%)    319 (0.7%)  core::mem::maybe_uninit::MaybeUninit<T>::assume_init
+     3501 (0.3%)    389 (0.9%)  core::mem::align_of
+     3312 (0.3%)     46 (0.1%)  smallvec::SmallVec<A>::push
+     3186 (0.2%)     59 (0.1%)  hashbrown::raw::calculate_layout
+     3183 (0.2%)     76 (0.2%)  <[A] as core::slice::SlicePartialEq<A>>::equal
+     3180 (0.2%)     76 (0.2%)  <core::slice::Iter<T> as core::iter::traits::exact_size::ExactSizeIterator>::len
+     3120 (0.2%)    195 (0.4%)  core::alloc::layout::size_align
+     2990 (0.2%)     46 (0.1%)  smallvec::layout_array
+     2945 (0.2%)    270 (0.6%)  <alloc::vec::Vec<T> as core::ops::drop::Drop>::drop
+     2927 (0.2%)     89 (0.2%)  salsa::QueryTable<Q>::try_get
+     2815 (0.2%)    465 (1.0%)  core::ptr::non_null::NonNull<T>::cast
+     2780 (0.2%)     51 (0.1%)  salsa::derived::slot::Memo<Q>::validate_memoized_value
+     2760 (0.2%)     46 (0.1%)  <salsa::blocking_future::Slot<T> as core::default::Default>::default
+     2750 (0.2%)     44 (0.1%)  hashbrown::raw::RawTable<T>::rehash_in_place::{{closure}}
+     2662 (0.2%)     22 (0.0%)  hashbrown::raw::RawTable<T>::find_insert_slot
+     2625 (0.2%)     75 (0.2%)  core::iter::traits::iterator::Iterator::zip
+     2612 (0.2%)    283 (0.6%)  core::mem::min_align_of_val
+     2599 (0.2%)    282 (0.6%)  core::mem::size_of_val
+     2570 (0.2%)    257 (0.6%)  core::ptr::mut_ptr::<impl *mut T>::offset
+     2530 (0.2%)    110 (0.2%)  indexmap::map::ShortHashProxy<Sz>::get_short_hash
+     2530 (0.2%)     46 (0.1%)  salsa::blocking_future::BlockingFuture<T>::new
+     2476 (0.2%)     46 (0.1%)  salsa::blocking_future::Promise<T>::fulfil
+     2451 (0.2%)    100 (0.2%)  core::iter::traits::iterator::Iterator::all::check::{{closure}}
+     2448 (0.2%)     51 (0.1%)  salsa::derived::slot::PanicGuard<Q,MP>::report_unexpected_cycle
+     2439 (0.2%)    271 (0.6%)  alloc::vec::Vec<T>::as_mut_ptr
+     2401 (0.2%)    398 (0.9%)  core::ptr::unique::Unique<T>::cast
+     2397 (0.2%)     51 (0.1%)  lock_api::rwlock::RwLockUpgradableReadGuard<R,T>::upgrade
+     2349 (0.2%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::entry
+     2310 (0.2%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::get_full
+     2278 (0.2%)    169 (0.4%)  <alloc::sync::Arc<T> as core::clone::Clone>::clone
+     2254 (0.2%)     46 (0.1%)  smallvec::SmallVec<A>::new
+     2242 (0.2%)     59 (0.1%)  <hashbrown::raw::RawIter<T> as core::iter::traits::iterator::Iterator>::next
+     2189 (0.2%)    199 (0.4%)  <alloc::vec::Vec<T> as core::ops::deref::Deref>::deref
+     2181 (0.2%)     50 (0.1%)  <salsa::runtime::StampedValue<V> as core::clone::Clone>::clone
+     2178 (0.2%)     22 (0.0%)  hashbrown::raw::RawTable<T>::reserve_rehash
+     2145 (0.2%)    195 (0.4%)  core::alloc::layout::Layout::new
+     2135 (0.2%)     61 (0.1%)  alloc::raw_vec::RawVec<T,A>::new_in
+     2116 (0.2%)     92 (0.2%)  lock_api::mutex::Mutex<R,T>::new
+     2106 (0.2%)    264 (0.6%)  core::ptr::swap_nonoverlapping
+     2102 (0.2%)    434 (1.0%)  core::mem::drop
+     2070 (0.2%)     46 (0.1%)  <smallvec::IntoIter<A> as core::iter::traits::iterator::Iterator>::next
+     2035 (0.2%)     55 (0.1%)  indexmap::map::OrderMapCore<K,V>::find_using
+     2010 (0.2%)     17 (0.0%)  hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S>>::rustc_entry
+     1989 (0.2%)     51 (0.1%)  salsa::derived::slot::PanicGuard<Q,MP>::new
+     1976 (0.2%)     52 (0.1%)  <smallvec::SmallVec<A> as core::ops::index::IndexMut<I>>::index_mut
+     1971 (0.2%)    275 (0.6%)  core::mem::manually_drop::ManuallyDrop<T>::new
+     1967 (0.2%)    395 (0.9%)  core::ptr::write
+     1960 (0.1%)     56 (0.1%)  alloc::raw_vec::RawVec<T,A>::from_raw_parts_in
+     1934 (0.1%)    152 (0.3%)  core::cell::UnsafeCell<T>::new
+     1920 (0.1%)    192 (0.4%)  core::ptr::const_ptr::<impl *const T>::offset
+     1906 (0.1%)    319 (0.7%)  core::intrinsics::copy_nonoverlapping
+     1886 (0.1%)     46 (0.1%)  <smallvec::SmallVec<A> as core::iter::traits::collect::IntoIterator>::into_iter
+     1856 (0.1%)     17 (0.0%)  salsa::interned::InternedStorage<Q>::intern_index::{{closure}}
+     1814 (0.1%)    120 (0.3%)  alloc::boxed::Box<T>::leak
+     1791 (0.1%)    199 (0.4%)  alloc::vec::Vec<T>::as_ptr
+     1781 (0.1%)    137 (0.3%)  alloc::raw_vec::RawVec<T,A>::capacity
+     1760 (0.1%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::get_index_of
+     1755 (0.1%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::set_memory
+     1751 (0.1%)     17 (0.0%)  salsa::interned::InternedStorage<Q>::intern_check
+     1736 (0.1%)    248 (0.5%)  core::slice::from_raw_parts
+     1711 (0.1%)     59 (0.1%)  hashbrown::raw::RawTable<T>::free_buckets
+     1705 (0.1%)     55 (0.1%)  alloc::raw_vec::RawVec<T,A>::reserve_exact
+     1704 (0.1%)    280 (0.6%)  alloc::rc::is_dangling
+     1664 (0.1%)     52 (0.1%)  smallvec::SmallVec<A>::triple_mut
+     1658 (0.1%)     17 (0.0%)  <salsa::interned::LookupInternedStorage<Q,IQ> as salsa::plumbing::QueryStorageOps<Q>>::try_fetch
+     1652 (0.1%)     59 (0.1%)  hashbrown::raw::Bucket<T>::add
+     1652 (0.1%)     59 (0.1%)  hashbrown::raw::RawTable<T>::iter
+     1620 (0.1%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::try_reserve
+     1556 (0.1%)     52 (0.1%)  <smallvec::SmallVec<A> as core::ops::drop::Drop>::drop
+     1551 (0.1%)     47 (0.1%)  smallvec::SmallVec<A>::triple
+     1539 (0.1%)     21 (0.0%)  core::option::Option<T>::map_or
+     1536 (0.1%)     51 (0.1%)  indexmap::map::OccupiedEntry<K,V>::into_mut
+     1518 (0.1%)     46 (0.1%)  lock_api::mutex::Mutex<R,T>::into_inner
+     1513 (0.1%)     17 (0.0%)  salsa::interned::InternTables<K>::slot_for_index
+     1503 (0.1%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_token_tree
+     1502 (0.1%)    280 (0.6%)  alloc::sync::Arc<T>::get_mut_unchecked
+     1485 (0.1%)     51 (0.1%)  salsa::derived::DerivedStorage<Q,MP>::slot::{{closure}}
+     1473 (0.1%)    372 (0.8%)  core::mem::maybe_uninit::MaybeUninit<T>::as_mut_ptr
+     1460 (0.1%)    286 (0.6%)  core::ptr::non_null::NonNull<T>::new_unchecked
+     1432 (0.1%)     33 (0.1%)  core::option::Option<T>::ok_or
+     1408 (0.1%)      4 (0.0%)  <salsa::input::InputStorage<Q> as salsa::plumbing::InputQueryStorageOps<Q>>::set::{{closure}}
+     1373 (0.1%)    275 (0.6%)  core::ptr::mut_ptr::<impl *mut T>::is_null
+     1364 (0.1%)    124 (0.3%)  <alloc::vec::Vec<T> as core::ops::deref::DerefMut>::deref_mut
+     1355 (0.1%)    271 (0.6%)  alloc::raw_vec::RawVec<T,A>::ptr
+     1350 (0.1%)    191 (0.4%)  core::ptr::unique::Unique<T>::new_unchecked
+     1300 (0.1%)    100 (0.2%)  core::iter::traits::iterator::Iterator::all
+     1298 (0.1%)     59 (0.1%)  hashbrown::raw::Bucket<T>::from_base_index
+     1298 (0.1%)     59 (0.1%)  hashbrown::raw::RawIterRange<T>::new
+     1292 (0.1%)     17 (0.0%)  std::collections::hash::map::map_entry
+     1286 (0.1%)    320 (0.7%)  core::mem::manually_drop::ManuallyDrop<T>::into_inner
+     1275 (0.1%)     89 (0.2%)  salsa::QueryTable<Q>::get
+     1265 (0.1%)     55 (0.1%)  lock_api::rwlock::RwLock<R,T>::new
+     1263 (0.1%)     75 (0.2%)  <[A] as core::slice::SlicePartialEq<A>>::equal::{{closure}}
+     1260 (0.1%)     35 (0.1%)  indexmap::map::hash_elem_using
+     1254 (0.1%)      1 (0.0%)  <ra_hir_def::expr::Expr as core::cmp::PartialEq>::eq
+     1246 (0.1%)    178 (0.4%)  core::slice::from_raw_parts_mut
+     1227 (0.1%)    367 (0.8%)  core::mem::maybe_uninit::MaybeUninit<T>::uninit
+     1217 (0.1%)    600 (1.3%)  core::ptr::non_null::NonNull<T>::as_ptr
+     1215 (0.1%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::capacity_from_bytes
+     1210 (0.1%)     55 (0.1%)  indexmap::map::OrderMapCore<K,V>::size_class_is_64bit
+     1208 (0.1%)    281 (0.6%)  core::ptr::non_null::NonNull<T>::as_ref
+     1190 (0.1%)     85 (0.2%)  core::slice::<impl [T]>::len
+     1186 (0.1%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::find
+     1182 (0.1%)     86 (0.2%)  hashbrown::map::HashMap<K,V,S>::get_key_value::{{closure}}
+     1178 (0.1%)     89 (0.2%)  <core::result::Result<T,E> as core::ops::try::Try>::from_error
+     1161 (0.1%)     43 (0.1%)  hashbrown::map::HashMap<K,V,S>::get_key_value
+     1122 (0.1%)     34 (0.1%)  hashbrown::map::make_hash
+     1122 (0.1%)     17 (0.0%)  salsa::interned::Slot<K>::try_update_accessed_at
+     1114 (0.1%)    171 (0.4%)  alloc::sync::Arc<T>::from_inner
+     1100 (0.1%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::reserve_one
+     1090 (0.1%)    262 (0.6%)  <alloc::sync::Arc<T> as core::ops::deref::Deref>::deref
+     1068 (0.1%)     89 (0.2%)  salsa::plumbing::get_query_table
+     1061 (0.1%)    127 (0.3%)  core::mem::forget
+     1056 (0.1%)     17 (0.0%)  hashbrown::raw::RawTable<T>::insert_no_grow
+     1054 (0.1%)     17 (0.0%)  <salsa::interned::InternedStorage<Q> as salsa::plumbing::QueryStorageOps<Q>>::try_fetch
+     1022 (0.1%)    146 (0.3%)  lock_api::mutex::Mutex<R,T>::guard
+     1020 (0.1%)     51 (0.1%)  indexmap::map::Entry<K,V>::index
+     1020 (0.1%)     17 (0.0%)  <salsa::interned::Slot<K> as core::fmt::Debug>::fmt
+     1012 (0.1%)     46 (0.1%)  smallvec::SmallVecData<A>::from_heap
+      988 (0.1%)     52 (0.1%)  <smallvec::SmallVec<A> as core::ops::deref::DerefMut>::deref_mut
+      969 (0.1%)     51 (0.1%)  core::ptr::swap
+      944 (0.1%)     59 (0.1%)  hashbrown::raw::Bucket<T>::as_ptr
+      934 (0.1%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_record_field_list
+      918 (0.1%)     51 (0.1%)  salsa::derived::slot::QueryState<Q>::in_progress
+      912 (0.1%)    228 (0.5%)  <&T as core::fmt::Debug>::fmt
+      898 (0.1%)     22 (0.0%)  hashbrown::raw::Bucket<T>::write
+      889 (0.1%)    127 (0.3%)  lock_api::rwlock::RwLock<R,T>::read_guard
+      889 (0.1%)    127 (0.3%)  lock_api::rwlock::RwLock<R,T>::write_guard
+      888 (0.1%)    280 (0.6%)  alloc::sync::Arc<T>::inner
+      883 (0.1%)    197 (0.4%)  core::slice::<impl core::ops::index::Index<I> for [T]>::index
+      882 (0.1%)     49 (0.1%)  <salsa::blocking_future::Promise<T> as core::ops::drop::Drop>::drop
+      882 (0.1%)      9 (0.0%)  <ra_arena::Idx<T> as core::fmt::Debug>::fmt
+      880 (0.1%)     55 (0.1%)  indexmap::util::third
+      876 (0.1%)    146 (0.3%)  <lock_api::mutex::MutexGuard<R,T> as core::ops::deref::DerefMut>::deref_mut
+      876 (0.1%)    146 (0.3%)  <lock_api::mutex::MutexGuard<R,T> as core::ops::drop::Drop>::drop
+      876 (0.1%)    146 (0.3%)  lock_api::mutex::Mutex<R,T>::lock
+      868 (0.1%)    124 (0.3%)  <usize as core::slice::SliceIndex<[T]>>::index
+      861 (0.1%)    123 (0.3%)  <usize as core::slice::SliceIndex<[T]>>::index_mut
+      857 (0.1%)      5 (0.0%)  core::sync::atomic::atomic_compare_exchange_weak
+      849 (0.1%)    283 (0.6%)  core::mem::align_of_val
+      846 (0.1%)     47 (0.1%)  <smallvec::SmallVec<A> as core::ops::deref::Deref>::deref
+      834 (0.1%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_sequences
+      825 (0.1%)      1 (0.0%)  ra_ssr::parsing::parse_constraint
+      816 (0.1%)     51 (0.1%)  salsa::lru::LruData<Node>::red_zone
+      816 (0.1%)     51 (0.1%)  salsa::lru::LruData<Node>::yellow_zone
+      810 (0.1%)    135 (0.3%)  alloc::raw_vec::RawVec<T,A>::needs_to_grow
+      810 (0.1%)    135 (0.3%)  alloc::vec::Vec<T>::reserve
+      808 (0.1%)     19 (0.0%)  <core::slice::Iter<T> as core::iter::traits::iterator::Iterator>::next
+      807 (0.1%)    399 (0.9%)  core::ptr::unique::Unique<T>::as_ptr
+      801 (0.1%)     48 (0.1%)  <alloc::sync::Arc<T> as alloc::sync::ArcEqIdent<T>>::eq
+      792 (0.1%)    264 (0.6%)  core::mem::swap
+      787 (0.1%)      1 (0.0%)  ra_ssr::parsing::parse_placeholder
+      782 (0.1%)     52 (0.1%)  smallvec::SmallVecData<A>::heap
+      782 (0.1%)      9 (0.0%)  core::fmt::builders::DebugList::entries
+      771 (0.1%)    257 (0.6%)  core::ptr::mut_ptr::<impl *mut T>::add
+      770 (0.1%)      4 (0.0%)  <salsa::input::InputStorage<Q> as salsa::plumbing::InputQueryStorageOps<Q>>::set
+      765 (0.1%)     51 (0.1%)  <salsa::derived::slot::PanicGuard<Q,MP> as core::ops::drop::Drop>::drop
+      765 (0.1%)     51 (0.1%)  core::slice::<impl [T]>::swap
+      762 (0.1%)    127 (0.3%)  <lock_api::rwlock::RwLockReadGuard<R,T> as core::ops::deref::Deref>::deref
+      762 (0.1%)    127 (0.3%)  <lock_api::rwlock::RwLockReadGuard<R,T> as core::ops::drop::Drop>::drop
+      762 (0.1%)    127 (0.3%)  <lock_api::rwlock::RwLockWriteGuard<R,T> as core::ops::deref::DerefMut>::deref_mut
+      762 (0.1%)    127 (0.3%)  <lock_api::rwlock::RwLockWriteGuard<R,T> as core::ops::drop::Drop>::drop
+      762 (0.1%)    127 (0.3%)  lock_api::rwlock::RwLock<R,T>::read
+      762 (0.1%)    127 (0.3%)  lock_api::rwlock::RwLock<R,T>::write
+      760 (0.1%)     76 (0.2%)  core::ptr::const_ptr::<impl *const T>::guaranteed_eq
+      750 (0.1%)     19 (0.0%)  core::slice::Iter<T>::post_inc_start
+      747 (0.1%)    177 (0.4%)  core::slice::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
+      742 (0.1%)     69 (0.2%)  core::ops::function::FnOnce::call_once
+      737 (0.1%)     67 (0.1%)  <alloc::vec::Vec<A> as core::cmp::PartialEq<alloc::vec::Vec<B>>>::eq
+      736 (0.1%)     46 (0.1%)  smallvec::SmallVecData<A>::from_inline
+      735 (0.1%)     21 (0.0%)  <std::collections::hash::map::HashMap<K,V,S> as core::cmp::PartialEq>::eq
+      732 (0.1%)     61 (0.1%)  alloc::vec::Vec<T>::with_capacity
+      731 (0.1%)     17 (0.0%)  salsa::interned::InternedStorage<Q>::lookup_value
+      729 (0.1%)      1 (0.0%)  alloc::str::join_generic_copy
+      714 (0.1%)     51 (0.1%)  salsa::lru::LruData<Node>::green_zone
+      712 (0.1%)     89 (0.2%)  salsa::QueryTable<Q>::new
+      690 (0.1%)     46 (0.1%)  smallvec::deallocate
+      672 (0.1%)      5 (0.0%)  hashbrown::map::HashMap<K,V,S>::insert
+      660 (0.1%)     55 (0.1%)  alloc::raw_vec::RawVec<T,A>::try_reserve_exact
+      644 (0.0%)     46 (0.1%)  parking_lot::condvar::Condvar::wait
+      643 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNode<L> as core::fmt::Debug>::fmt
+      637 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_token
+      635 (0.0%)    376 (0.8%)  <core::mem::manually_drop::ManuallyDrop<T> as core::ops::deref::DerefMut>::deref_mut
+      630 (0.0%)     45 (0.1%)  hashbrown::raw::RawTable<T>::probe_seq
+      630 (0.0%)      2 (0.0%)  core::str::pattern::TwoWaySearcher::next
+      626 (0.0%)     52 (0.1%)  smallvec::SmallVecData<A>::inline_mut
+      624 (0.0%)     52 (0.1%)  alloc::vec::Vec<T>::from_raw_parts
+      624 (0.0%)     52 (0.1%)  smallvec::SmallVec<A>::inline_capacity
+      621 (0.0%)    123 (0.3%)  core::cmp::impls::<impl core::cmp::PartialEq<&B> for &A>::eq
+      616 (0.0%)     44 (0.1%)  <hashbrown::scopeguard::ScopeGuard<T,F> as core::ops::drop::Drop>::drop
+      611 (0.0%)      5 (0.0%)  hashbrown::raw::RawTable<T>::insert
+      609 (0.0%)     17 (0.0%)  hashbrown::rustc_entry::RustcVacantEntry<K,V>::insert
+      595 (0.0%)     17 (0.0%)  salsa::interned::InternTables<K>::slot_for_key
+      594 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::reserve
+      590 (0.0%)    118 (0.3%)  <core::ptr::non_null::NonNull<T> as core::convert::From<&mut T>>::from
+      578 (0.0%)    200 (0.4%)  <I as core::iter::traits::collect::IntoIterator>::into_iter
+      572 (0.0%)     59 (0.1%)  core::mem::take
+      570 (0.0%)    190 (0.4%)  core::ptr::const_ptr::<impl *const T>::add
+      570 (0.0%)     46 (0.1%)  salsa::blocking_future::State<T>::is_empty
+      565 (0.0%)    129 (0.3%)  core::ptr::unique::Unique<T>::as_ref
+      565 (0.0%)     47 (0.1%)  smallvec::SmallVecData<A>::inline
+      557 (0.0%)    283 (0.6%)  core::cell::UnsafeCell<T>::get
+      550 (0.0%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::get
+      528 (0.0%)     44 (0.1%)  hashbrown::raw::RawTable<T>::new_uninitialized::{{closure}}
+      525 (0.0%)     75 (0.2%)  <core::iter::adapters::zip::Zip<A,B> as core::iter::traits::iterator::Iterator>::next
+      525 (0.0%)     75 (0.2%)  <core::slice::Iter<T> as core::iter::adapters::zip::TrustedRandomAccess>::get_unchecked
+      519 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::atomic_compare_exchange_weak
+      519 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_node
+      506 (0.0%)     46 (0.1%)  smallvec::SmallVec<A>::set_len
+      506 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::new
+      502 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::output_debug_for_nodes_at_range
+      496 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::find_matches
+      493 (0.0%)     21 (0.0%)  <std::collections::hash::map::HashMap<K,V,S> as core::cmp::PartialEq>::eq::{{closure}}
+      489 (0.0%)     26 (0.1%)  <hashbrown::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next::{{closure}}
+      480 (0.0%)     60 (0.1%)  core::mem::needs_drop
+      480 (0.0%)      4 (0.0%)  <salsa::input::InputStorage<Q> as salsa::plumbing::QueryStorageOps<Q>>::try_fetch
+      478 (0.0%)      1 (0.0%)  ra_ssr::parsing::parse_pattern
+      476 (0.0%)      1 (0.0%)  <ra_hir_def::expr::Pat as core::cmp::PartialEq>::eq
+      470 (0.0%)     52 (0.1%)  smallvec::SmallVecData<A>::heap_mut
+      460 (0.0%)     46 (0.1%)  <alloc::sync::Arc<T> as core::default::Default>::default
+      460 (0.0%)     46 (0.1%)  <lock_api::mutex::Mutex<R,T> as core::default::Default>::default
+      460 (0.0%)     46 (0.1%)  smallvec::SmallVec<A>::len
+      460 (0.0%)     46 (0.1%)  smallvec::SmallVec<A>::reserve
+      460 (0.0%)     46 (0.1%)  smallvec::layout_array::{{closure}}
+      459 (0.0%)     51 (0.1%)  salsa::lru::LruData<Node>::pick_index
+      452 (0.0%)      1 (0.0%)  ra_ssr::parsing::<impl core::str::FromStr for ra_ssr::SsrRule>::from_str
+      441 (0.0%)    247 (0.5%)  <core::mem::manually_drop::ManuallyDrop<T> as core::ops::deref::Deref>::deref
+      440 (0.0%)    110 (0.2%)  indexmap::map::IndexMap<K,V,S>::double_capacity
+      440 (0.0%)     55 (0.1%)  indexmap::map::OrderMapCore<K,V>::raw_capacity
+      440 (0.0%)     44 (0.1%)  hashbrown::scopeguard::guard
+      438 (0.0%)      1 (0.0%)  ra_ssr::parsing::<impl core::str::FromStr for ra_ssr::SsrPattern>::from_str
+      432 (0.0%)      4 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T,I>>::spec_extend
+      432 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::try_match
+      430 (0.0%)    130 (0.3%)  <T as core::convert::Into<U>>::into
+      430 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::TyData<I>>::fmt
+      427 (0.0%)     61 (0.1%)  alloc::raw_vec::RawVec<T,A>::with_capacity_in
+      427 (0.0%)     61 (0.1%)  alloc::raw_vec::RawVec<T>::with_capacity
+      423 (0.0%)     85 (0.2%)  core::ptr::const_ptr::<impl *const T>::is_null
+      420 (0.0%)      4 (0.0%)  core::iter::traits::exact_size::ExactSizeIterator::len
+      414 (0.0%)      4 (0.0%)  alloc::vec::Vec<T>::extend_desugared
+      408 (0.0%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::database_key_index
+      402 (0.0%)    134 (0.3%)  alloc::vec::Vec<T>::len
+      396 (0.0%)      4 (0.0%)  core::iter::traits::iterator::Iterator::fold
+      392 (0.0%)     98 (0.2%)  core::mem::maybe_uninit::MaybeUninit<T>::as_ptr
+      392 (0.0%)     56 (0.1%)  alloc::raw_vec::RawVec<T>::from_raw_parts
+      392 (0.0%)      9 (0.0%)  core::result::Result<T,E>::unwrap
+      390 (0.0%)     26 (0.1%)  hashbrown::map::HashMap<K,V,S>::iter
+      386 (0.0%)    100 (0.2%)  <core::result::Result<T,E> as core::ops::try::Try>::into_result
+      384 (0.0%)      1 (0.0%)  <ra_ssr::MatchDebugInfo as core::fmt::Debug>::fmt
+      379 (0.0%)     75 (0.2%)  <alloc::sync::Arc<T> as core::fmt::Debug>::fmt
+      368 (0.0%)     46 (0.1%)  <&mut I as core::iter::traits::iterator::Iterator>::next
+      366 (0.0%)     61 (0.1%)  core::ptr::unique::Unique<T>::dangling
+      357 (0.0%)     51 (0.1%)  <salsa::derived::AlwaysMemoizeValue as salsa::derived::MemoizationPolicy<Q>>::memoized_value_eq
+      357 (0.0%)     51 (0.1%)  lock_api::rwlock::RwLock<R,T>::upgradable_guard
+      357 (0.0%)      5 (0.0%)  std::thread::local::LocalKey<T>::try_with
+      354 (0.0%)     15 (0.0%)  <core::option::Option<T> as core::clone::Clone>::clone
+      345 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ModItem as core::cmp::PartialEq>::eq
+      344 (0.0%)     43 (0.1%)  hashbrown::map::HashMap<K,V,S>::get
+      344 (0.0%)      2 (0.0%)  core::sync::atomic::atomic_compare_exchange
+      342 (0.0%)      1 (0.0%)  <rowan::api::SyntaxToken<L> as core::fmt::Debug>::fmt
+      339 (0.0%)      1 (0.0%)  ra_ssr::parsing::validate_rule
+      338 (0.0%)     26 (0.1%)  <hashbrown::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next
+      338 (0.0%)     26 (0.1%)  std::collections::hash::map::HashMap<K,V,S>::iter
+      332 (0.0%)      9 (0.0%)  core::hash::Hash::hash_slice
+      330 (0.0%)     55 (0.1%)  alloc::vec::Vec<T>::reserve_exact
+      324 (0.0%)     18 (0.0%)  core::tuple::<impl core::cmp::PartialEq for (A,B)>::eq
+      324 (0.0%)      3 (0.0%)  <core::result::Result<T,E> as core::cmp::PartialEq>::eq
+      323 (0.0%)    100 (0.2%)  core::iter::traits::iterator::Iterator::all::check
+      323 (0.0%)     17 (0.0%)  hashbrown::map::HashMap<K,V,S>::reserve
+      323 (0.0%)      1 (0.0%)  <chalk_ir::DomainGoal<I> as core::cmp::PartialEq>::eq
+      320 (0.0%)      4 (0.0%)  core::result::Result<T,E>::map
+      319 (0.0%)      1 (0.0%)  <ra_hir_ty::TypeCtor as core::cmp::PartialEq>::eq
+      315 (0.0%)     45 (0.1%)  hashbrown::raw::RawTable<T>::bucket
+      315 (0.0%)     45 (0.1%)  hashbrown::raw::RawTable<T>::ctrl
+      315 (0.0%)     17 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::entry
+      312 (0.0%)     52 (0.1%)  smallvec::SmallVec<A>::spilled
+      312 (0.0%)     39 (0.1%)  alloc::sync::Arc<T>::ptr_eq
+      312 (0.0%)      5 (0.0%)  core::option::Option<T>::and_then
+      310 (0.0%)     52 (0.1%)  core::intrinsics::copy
+      308 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::resize::{{closure}}
+      306 (0.0%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::find::{{closure}}
+      306 (0.0%)     51 (0.1%)  <lock_api::rwlock::RwLockUpgradableReadGuard<R,T> as core::ops::deref::Deref>::deref
+      306 (0.0%)     51 (0.1%)  <lock_api::rwlock::RwLockUpgradableReadGuard<R,T> as core::ops::drop::Drop>::drop
+      306 (0.0%)     51 (0.1%)  lock_api::rwlock::RwLock<R,T>::upgradable_read
+      305 (0.0%)      1 (0.0%)  ra_ssr::parsing::tokenize
+      301 (0.0%)      1 (0.0%)  <ra_hir_def::AttrDefId as core::cmp::PartialEq>::eq
+      296 (0.0%)      2 (0.0%)  alloc::raw_vec::RawVec<T,A>::shrink
+      296 (0.0%)      2 (0.0%)  smol_str::Repr::new
+      295 (0.0%)     59 (0.1%)  hashbrown::raw::Bucket<T>::drop
+      294 (0.0%)      2 (0.0%)  alloc::sync::Arc<T>::allocate_for_layout
+      291 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write
+      288 (0.0%)     16 (0.0%)  <ra_hir_expand::InFile<T> as core::cmp::PartialEq>::eq
+      288 (0.0%)      4 (0.0%)  <alloc::vec::Vec<T> as core::iter::traits::collect::IntoIterator>::into_iter
+      288 (0.0%)      1 (0.0%)  <ra_hir_def::type_ref::TypeRef as core::cmp::PartialEq>::eq
+      286 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::set_ctrl
+      285 (0.0%)      1 (0.0%)  ra_ssr::replacing::render_replace
+      280 (0.0%)      1 (0.0%)  <chalk_ir::GoalData<I> as core::cmp::PartialEq>::eq
+      276 (0.0%)     46 (0.1%)  <lock_api::mutex::MutexGuard<R,T> as core::ops::deref::Deref>::deref
+      275 (0.0%)     55 (0.1%)  indexmap::map::OrderMapCore<K,V>::capacity
+      275 (0.0%)     55 (0.1%)  indexmap::map::VacantEntry<K,V>::index
+      275 (0.0%)      7 (0.0%)  core::result::Result<T,E>::ok
+      272 (0.0%)     48 (0.1%)  salsa::plumbing::QueryFunction::recover
+      272 (0.0%)      2 (0.0%)  core::fmt::builders::DebugMap::entries
+      271 (0.0%)      1 (0.0%)  ra_ssr::matching::<impl ra_ssr::SsrPattern>::tree_for_kind
+      270 (0.0%)      9 (0.0%)  <ra_hir_expand::InFile<T> as core::fmt::Debug>::fmt
+      264 (0.0%)      4 (0.0%)  <salsa::input::InputStorage<Q> as salsa::plumbing::QueryStorageOps<Q>>::try_fetch::{{closure}}
+      264 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ModItem as core::hash::Hash>::hash
+      262 (0.0%)    131 (0.3%)  core::slice::<impl [T]>::as_ptr
+      259 (0.0%)      4 (0.0%)  <alloc::vec::IntoIter<T> as core::iter::traits::iterator::Iterator>::next
+      259 (0.0%)      1 (0.0%)  <chalk_ir::TypeName<I> as core::cmp::PartialEq>::eq
+      258 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ItemTreeData as core::cmp::PartialEq>::eq
+      257 (0.0%)      1 (0.0%)  <ra_hir_def::ModuleDefId as core::cmp::PartialEq>::eq
+      256 (0.0%)      1 (0.0%)  ra_ssr::matching::only_ident
+      255 (0.0%)      4 (0.0%)  core::iter::adapters::map_fold::{{closure}}
+      254 (0.0%)     22 (0.0%)  core::ptr::mut_ptr::<impl *mut T>::write
+      254 (0.0%)      1 (0.0%)  core::char::methods::encode_utf8_raw
+      245 (0.0%)      1 (0.0%)  <chalk_ir::DomainGoal<I> as core::hash::Hash>::hash
+      244 (0.0%)      1 (0.0%)  <ra_hir_ty::TypeCtor as core::hash::Hash>::hash
+      243 (0.0%)      3 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Binders<T>>::fmt
+      241 (0.0%)      7 (0.0%)  core::option::Option<T>::unwrap
+      241 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::check_constraint
+      240 (0.0%)     80 (0.2%)  core::slice::size_from_ptr
+      240 (0.0%)      8 (0.0%)  <(T10,T11) as core::fmt::Debug>::fmt
+      236 (0.0%)     59 (0.1%)  hashbrown::raw::RawTable<T>::buckets
+      236 (0.0%)     59 (0.1%)  hashbrown::raw::RawTable<T>::is_empty_singleton
+      236 (0.0%)     13 (0.0%)  core::clone::Clone::clone
+      235 (0.0%)      1 (0.0%)  alloc::sync::Arc<[T]>::from_iter_exact
+      234 (0.0%)      4 (0.0%)  <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+      233 (0.0%)      1 (0.0%)  rowan::cursor::SyntaxNode::preorder_with_tokens::{{closure}}
+      230 (0.0%)     46 (0.1%)  core::cell::UnsafeCell<T>::into_inner
+      228 (0.0%)     76 (0.2%)  core::slice::<impl core::cmp::PartialEq<[B]> for [A]>::eq
+      228 (0.0%)      2 (0.0%)  core::slice::<impl [T]>::copy_from_slice
+      228 (0.0%)      1 (0.0%)  <chalk_ir::TyData<I> as core::cmp::PartialEq>::eq
+      227 (0.0%)      1 (0.0%)  <ra_hir_def::expr::Literal as core::cmp::PartialEq>::eq
+      226 (0.0%)      1 (0.0%)  <ra_hir_def::AttrDefId as core::hash::Hash>::hash
+      225 (0.0%)     75 (0.2%)  core::iter::adapters::zip::Zip<A,B>::new
+      224 (0.0%)     56 (0.1%)  indexmap::map::IndexMap<K,V,S>::is_empty
+      224 (0.0%)     56 (0.1%)  indexmap::map::IndexMap<K,V,S>::len
+      224 (0.0%)     56 (0.1%)  indexmap::map::OrderMapCore<K,V>::len
+      220 (0.0%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::capacity
+      220 (0.0%)     55 (0.1%)  indexmap::map::IndexMap<K,V,S>::size_class_is_64bit
+      220 (0.0%)      1 (0.0%)  <core::str::pattern::CharSearcher as core::str::pattern::ReverseSearcher>::next_match_back
+      218 (0.0%)      4 (0.0%)  <core::option::Option<T> as core::fmt::Debug>::fmt
+      217 (0.0%)     12 (0.0%)  core::mem::transmute_copy
+      216 (0.0%)     12 (0.0%)  <chalk_ir::Binders<T> as core::cmp::PartialEq>::eq
+      214 (0.0%)      1 (0.0%)  <ra_hir_ty::Ty as core::cmp::PartialEq>::eq
+      213 (0.0%)      1 (0.0%)  <ra_hir_def::GenericDefId as core::cmp::PartialEq>::eq
+      209 (0.0%)      1 (0.0%)  ra_ssr::parsing::expect_token
+      208 (0.0%)     26 (0.1%)  <std::collections::hash::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next
+      208 (0.0%)      4 (0.0%)  <core::option::Option<T> as core::hash::Hash>::hash
+      204 (0.0%)     68 (0.1%)  <core::ops::range::RangeFull as core::slice::SliceIndex<[T]>>::index
+      204 (0.0%)     17 (0.0%)  std::collections::hash::map::VacantEntry<K,V>::insert
+      204 (0.0%)      4 (0.0%)  <alloc::vec::IntoIter<T> as core::iter::traits::iterator::Iterator>::size_hint
+      204 (0.0%)      3 (0.0%)  <core::slice::Iter<T> as core::iter::traits::iterator::Iterator>::size_hint
+      200 (0.0%)      1 (0.0%)  <chalk_ir::TypeName<I> as core::hash::Hash>::hash
+      200 (0.0%)      1 (0.0%)  <core::str::pattern::StrSearcher as core::str::pattern::Searcher>::next
+      200 (0.0%)      1 (0.0%)  ra_ssr::SsrMatches::flatten_into
+      198 (0.0%)     59 (0.1%)  <core::option::Option<T> as core::default::Default>::default
+      198 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::reserve_rehash::{{closure}}
+      198 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::try_with_capacity::{{closure}}
+      197 (0.0%)      2 (0.0%)  <core::iter::adapters::Enumerate<I> as core::iter::traits::iterator::Iterator>::next
+      195 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ConstData<I>>::fmt
+      193 (0.0%)      4 (0.0%)  core::iter::traits::iterator::Iterator::for_each
+      191 (0.0%)      1 (0.0%)  <ra_hir_def::lang_item::LangItemTarget as core::cmp::PartialEq>::eq
+      188 (0.0%)      2 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::try_fold::check::{{closure}}
+      188 (0.0%)      1 (0.0%)  <ra_ssr::parsing::SsrTemplate as core::str::FromStr>::from_str
+      187 (0.0%)      1 (0.0%)  <chalk_ir::GoalData<I> as core::hash::Hash>::hash
+      187 (0.0%)      1 (0.0%)  alloc::raw_vec::finish_grow
+      185 (0.0%)     59 (0.1%)  core::option::Option<T>::take
+      184 (0.0%)      1 (0.0%)  salsa::runtime::Runtime::is_current_revision_canceled
+      183 (0.0%)      3 (0.0%)  <T as alloc::string::ToString>::to_string
+      180 (0.0%)      6 (0.0%)  <ra_hir_def::ItemLoc<N> as core::fmt::Debug>::fmt
+      179 (0.0%)      4 (0.0%)  salsa::QueryTableMut<Q>::set_with_durability
+      175 (0.0%)     35 (0.1%)  <Q as indexmap::equivalent::Equivalent<K>>::equivalent
+      170 (0.0%)      1 (0.0%)  ra_hir_ty::db::infer_wait::{{closure}}
+      169 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::ValueTyDefId as core::cmp::PartialEq>::eq
+      168 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::atomic_load
+      165 (0.0%)      5 (0.0%)  hashbrown::map::HashMap<K,V,S>::with_hasher
+      165 (0.0%)      1 (0.0%)  <ra_hir_def::nameres::ModuleOrigin as core::cmp::PartialEq>::eq
+      162 (0.0%)      6 (0.0%)  <ra_hir_def::ItemLoc<N> as core::clone::Clone>::clone
+      162 (0.0%)      2 (0.0%)  core::cmp::max_by
+      162 (0.0%)      2 (0.0%)  core::cmp::min_by
+      162 (0.0%)      1 (0.0%)  <chalk_ir::LifetimeData<I> as core::cmp::PartialEq>::eq
+      162 (0.0%)      1 (0.0%)  <ra_hir_ty::Ty as core::hash::Hash>::hash
+      162 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::debug_where_text_equal
+      160 (0.0%)     40 (0.1%)  std::collections::hash::map::HashMap<K,V,S>::get
+      160 (0.0%)      5 (0.0%)  core::ptr::const_ptr::<impl *const T>::offset_from
+      159 (0.0%)     53 (0.1%)  <core::ops::range::RangeFull as core::slice::SliceIndex<[T]>>::index_mut
+      157 (0.0%)      5 (0.0%)  ra_ssr::parsing::<impl core::str::FromStr for ra_ssr::SsrPattern>::from_str::{{closure}}
+      156 (0.0%)      3 (0.0%)  <core::iter::adapters::Cloned<I> as core::iter::traits::iterator::Iterator>::fold
+      156 (0.0%)      1 (0.0%)  <chalk_ir::TyData<I> as core::hash::Hash>::hash
+      154 (0.0%)     22 (0.0%)  hashbrown::raw::Bucket<T>::copy_from_nonoverlapping
+      153 (0.0%)     51 (0.1%)  indexmap::map::OccupiedEntry<K,V>::index
+      153 (0.0%)     51 (0.1%)  salsa::derived::slot::Slot<Q,MP>::should_memoize_value
+      153 (0.0%)      9 (0.0%)  core::any::type_name
+      152 (0.0%)      4 (0.0%)  <alloc::vec::IntoIter<T> as core::ops::drop::Drop>::drop
+      152 (0.0%)      2 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::try_fold
+      152 (0.0%)      2 (0.0%)  indexmap::map::Pos::resolve
+      150 (0.0%)      1 (0.0%)  <ra_hir_def::GenericDefId as core::hash::Hash>::hash
+      150 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::LifetimeData<I>>::fmt
+      149 (0.0%)     59 (0.1%)  core::ptr::mut_ptr::<impl *mut T>::drop_in_place
+      149 (0.0%)      1 (0.0%)  ra_ssr::matching::<impl ra_ssr::parsing::NodeKind>::matches
+      148 (0.0%)      4 (0.0%)  salsa::input::InputStorage<Q>::slot
+      148 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroDefKind as core::cmp::PartialEq>::eq
+      148 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Impl as core::cmp::PartialEq>::eq
+      148 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::WhereClause<I>>::fmt
+      147 (0.0%)      1 (0.0%)  <chalk_ir::ConstValue<I> as core::cmp::PartialEq>::eq
+      147 (0.0%)      1 (0.0%)  <ra_hir_def::expr::BinaryOp as core::cmp::PartialEq>::eq
+      147 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::AssocItem as core::cmp::PartialEq>::eq
+      147 (0.0%)      1 (0.0%)  <ra_hir_expand::db::TokenExpander as core::cmp::PartialEq>::eq
+      147 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::InferTy as core::cmp::PartialEq>::eq
+      147 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::GenericArgData<I>>::fmt
+      146 (0.0%)      1 (0.0%)  <ra_hir_ty::Ty as core::clone::Clone>::clone
+      144 (0.0%)     48 (0.1%)  <alloc::sync::Arc<T> as core::cmp::PartialEq>::eq
+      144 (0.0%)      9 (0.0%)  <[T] as core::fmt::Debug>::fmt
+      144 (0.0%)      1 (0.0%)  <salsa::CycleError<K> as core::fmt::Display>::fmt
+      140 (0.0%)      5 (0.0%)  alloc::slice::hack::to_vec
+      140 (0.0%)      1 (0.0%)  <ra_hir_def::expr::Statement as core::cmp::PartialEq>::eq
+      140 (0.0%)      1 (0.0%)  <ra_tt::ExpansionError as core::cmp::PartialEq>::eq
+      138 (0.0%)     46 (0.1%)  <smallvec::SmallVec<A> as core::default::Default>::default
+      138 (0.0%)     46 (0.1%)  lock_api::mutex::MutexGuard<R,T>::mutex
+      138 (0.0%)     46 (0.1%)  smallvec::SmallVec<A>::inline_size
+      138 (0.0%)      1 (0.0%)  <alloc::alloc::Global as core::alloc::AllocRef>::shrink
+      138 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::InferenceResult as core::cmp::PartialEq>::eq
+      135 (0.0%)     45 (0.1%)  hashbrown::raw::Bucket<T>::as_ref
+      134 (0.0%)     26 (0.1%)  <core::option::Option<T> as core::ops::try::Try>::from_error
+      133 (0.0%)      1 (0.0%)  <core::iter::sources::Successors<T,F> as core::iter::traits::iterator::Iterator>::next
+      132 (0.0%)     22 (0.0%)  core::ptr::non_null::NonNull<T>::dangling
+      132 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::extend
+      130 (0.0%)     26 (0.1%)  <ra_arena::Arena<T> as core::cmp::PartialEq>::eq
+      130 (0.0%)      7 (0.0%)  core::ptr::read_unaligned
+      130 (0.0%)      5 (0.0%)  core::sync::atomic::atomic_load
+      130 (0.0%)      1 (0.0%)  <alloc::alloc::Global as core::alloc::AllocRef>::grow
+      129 (0.0%)      1 (0.0%)  <ra_hir_def::expr::CmpOp as core::cmp::PartialEq>::eq
+      129 (0.0%)      1 (0.0%)  alloc::vec::Vec<T>::extend_with
+      129 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::validate_range
+      128 (0.0%)      4 (0.0%)  core::cell::Cell<T>::replace
+      126 (0.0%)     21 (0.0%)  <std::collections::hash::map::HashMap<K,V,S> as core::cmp::PartialEq>::eq::{{closure}}::{{closure}}
+      126 (0.0%)      1 (0.0%)  <chalk_ir::Scalar as core::cmp::PartialEq>::eq
+      126 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::AttrOwner as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_def::AdtId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_def::AssocContainerId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_def::AssocItemId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_def::DefWithBodyId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_def::VariantId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::CallableDef as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::TyDefId as core::cmp::PartialEq>::eq
+      125 (0.0%)      1 (0.0%)  <ra_tt::Leaf as core::cmp::PartialEq>::eq
+      122 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::VariableKind<I>>::fmt
+      121 (0.0%)     27 (0.1%)  <core::option::Option<T> as core::ops::try::Try>::into_result
+      120 (0.0%)      6 (0.0%)  crossbeam_utils::atomic::atomic_cell::can_transmute
+      119 (0.0%)     17 (0.0%)  hashbrown::map::HashMap<K,V,S>::reserve::{{closure}}
+      119 (0.0%)      1 (0.0%)  <chalk_ir::GenericArgData<I> as core::cmp::PartialEq>::eq
+      119 (0.0%)      1 (0.0%)  <chalk_ir::WhereClause<I> as core::cmp::PartialEq>::eq
+      119 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::diagnostics::InferenceDiagnostic as core::cmp::PartialEq>::eq
+      118 (0.0%)     59 (0.1%)  hashbrown::raw::RawTable<T>::free_buckets::{{closure}}
+      118 (0.0%)      1 (0.0%)  <ra_hir_def::expr::Array as core::cmp::PartialEq>::eq
+      118 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallKind as core::cmp::PartialEq>::eq
+      118 (0.0%)      1 (0.0%)  <ra_mbe::syntax_bridge::TokenTextRange as core::cmp::PartialEq>::eq
+      117 (0.0%)      9 (0.0%)  core::hash::impls::<impl core::hash::Hash for [T]>::hash
+      117 (0.0%)      1 (0.0%)  <alloc::alloc::Global as core::alloc::AllocRef>::alloc
+      114 (0.0%)      6 (0.0%)  <ra_hir_ty::Binders<T> as core::cmp::PartialEq>::eq
+      114 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Function as core::cmp::PartialEq>::eq
+      113 (0.0%)      1 (0.0%)  ra_ssr::parsing::RawSearchPattern::placeholders_by_stand_in
+      112 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::ValueTyDefId as core::hash::Hash>::hash
+      110 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::num_ctrl_bytes
+      110 (0.0%)     11 (0.0%)  alloc::vec::Vec<T>::new
+      110 (0.0%)      2 (0.0%)  core::slice::Iter<T>::make_slice
+      110 (0.0%)      1 (0.0%)  rowan::utility_types::WalkEvent<T>::map
+      108 (0.0%)      6 (0.0%)  <ra_arena::map::ArenaMap<ID,V> as core::cmp::PartialEq>::eq
+      108 (0.0%)      6 (0.0%)  <ra_hir_def::ItemLoc<N> as core::cmp::PartialEq>::eq
+      107 (0.0%)      3 (0.0%)  core::result::Result<T,E>::expect
+      107 (0.0%)      2 (0.0%)  ra_ssr::matching::record_match_fails_reasons_scope
+      107 (0.0%)      1 (0.0%)  <ra_ssr::parsing::RawSearchPattern as core::str::FromStr>::from_str
+      106 (0.0%)      1 (0.0%)  core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::nth
+      106 (0.0%)      1 (0.0%)  ra_ssr::matching::Phase::record_ignored_comments
+      105 (0.0%)      1 (0.0%)  <core::str::pattern::StrSearcher as core::str::pattern::Searcher>::next_match
+      105 (0.0%)      1 (0.0%)  <ra_hir_def::path::PathKind as core::cmp::PartialEq>::eq
+      105 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroDefKind as core::hash::Hash>::hash
+      105 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Impl as core::hash::Hash>::hash
+      104 (0.0%)      1 (0.0%)  <chalk_ir::VariableKind<I> as core::cmp::PartialEq>::eq
+      104 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinType as core::cmp::PartialEq>::eq
+      104 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Fields as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <either::Either<L,R> as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_def::ContainerId as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_def::generics::WherePredicateTarget as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_expand::HirFileIdRepr as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallId as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::ExprOrPatId as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::AssocTyValue as core::cmp::PartialEq>::eq
+      103 (0.0%)      1 (0.0%)  ra_ssr::replacing::matches_to_edit_at_offset
+      102 (0.0%)     51 (0.1%)  <salsa::derived::slot::Slot<Q,MP> as salsa::lru::LruNode>::lru_index
+      102 (0.0%)     17 (0.0%)  hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S>>::rustc_entry::{{closure}}
+       99 (0.0%)      1 (0.0%)  <chalk_ir::LifetimeData<I> as core::hash::Hash>::hash
+       99 (0.0%)      1 (0.0%)  <ra_hir_def::adt::VariantData as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  <ra_hir_def::data::FunctionData as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Repr as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  <ra_hir_ty::GenericPredicate as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Guidance as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  <ra_mbe::ExpandError as core::cmp::PartialEq>::eq
+       99 (0.0%)      1 (0.0%)  smol_str::Repr::as_str
+       98 (0.0%)     14 (0.0%)  <ra_hir_expand::InFile<T> as core::hash::Hash>::hash
+       98 (0.0%)      1 (0.0%)  <chalk_ir::AliasTy<I> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <chalk_ir::FromEnv<I> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <chalk_ir::WellFormed<I> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::InlineBound<I> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <core::iter::LoopState<C,B> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <ra_hir_def::attr::AttrInput as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Obligation as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Solution as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <ra_tt::TokenTree as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  <rowan::utility_types::NodeOrToken<N,T> as core::cmp::PartialEq>::eq
+       98 (0.0%)      1 (0.0%)  ra_ssr::parsing::Placeholder::new
+       96 (0.0%)     24 (0.1%)  hashbrown::map::HashMap<K,V,S>::len
+       96 (0.0%)     24 (0.1%)  std::collections::hash::map::HashMap<K,V,S>::len
+       96 (0.0%)      2 (0.0%)  <ra_syntax::Parse<T> as core::clone::Clone>::clone
+       96 (0.0%)      1 (0.0%)  <I as alloc::sync::ToArcSlice<T>>::to_arc_slice
+       96 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::TraitFlags as core::cmp::PartialEq>::eq
+       95 (0.0%)      1 (0.0%)  core::str::next_code_point
+       95 (0.0%)      1 (0.0%)  ra_ssr::parsing::RawSearchPattern::as_rust_code
+       94 (0.0%)      2 (0.0%)  <ra_hir_ty::Canonical<T> as core::clone::Clone>::clone
+       93 (0.0%)      1 (0.0%)  <chalk_ir::ConstValue<I> as core::hash::Hash>::hash
+       93 (0.0%)      1 (0.0%)  <ra_hir_def::item_scope::ItemScope as core::cmp::PartialEq>::eq
+       93 (0.0%)      1 (0.0%)  <ra_hir_def::nameres::CrateDefMap as core::cmp::PartialEq>::eq
+       93 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::InferTy as core::hash::Hash>::hash
+       92 (0.0%)     46 (0.1%)  lock_api::mutex::Mutex<R,T>::raw
+       92 (0.0%)      4 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T,I>>::spec_extend::{{closure}}
+       92 (0.0%)      2 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::fold
+       92 (0.0%)      2 (0.0%)  <rowan::utility_types::NodeOrToken<N,T> as core::clone::Clone>::clone
+       92 (0.0%)      2 (0.0%)  alloc::sync::Arc<T>::into_raw
+       92 (0.0%)      1 (0.0%)  parking_lot::raw_rwlock::RawRwLock::try_lock_shared_fast
+       91 (0.0%)      1 (0.0%)  <ra_tt::ExpansionError as core::clone::Clone>::clone
+       91 (0.0%)      1 (0.0%)  ra_prof::hprof::Profiler::detail
+       90 (0.0%)      3 (0.0%)  <ra_hir_def::AssocItemLoc<N> as core::fmt::Debug>::fmt
+       90 (0.0%)      1 (0.0%)  <ra_hir_def::path::ImportAlias as core::cmp::PartialEq>::eq
+       90 (0.0%)      1 (0.0%)  <ra_hir_def::type_ref::TypeBound as core::cmp::PartialEq>::eq
+       90 (0.0%)      1 (0.0%)  <ra_hir_def::visibility::RawVisibility as core::cmp::PartialEq>::eq
+       90 (0.0%)      1 (0.0%)  <ra_ssr::matching::PatternIterator as core::iter::traits::iterator::Iterator>::next
+       90 (0.0%)      1 (0.0%)  alloc::vec::Vec<T>::into_boxed_slice
+       90 (0.0%)      1 (0.0%)  core::option::Option<T>::get_or_insert_with
+       89 (0.0%)      4 (0.0%)  core::iter::traits::iterator::Iterator::for_each::call::{{closure}}
+       88 (0.0%)     44 (0.1%)  <hashbrown::scopeguard::ScopeGuard<T,F> as core::ops::deref::Deref>::deref
+       88 (0.0%)     44 (0.1%)  <hashbrown::scopeguard::ScopeGuard<T,F> as core::ops::deref::DerefMut>::deref_mut
+       87 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::MacroCall as core::cmp::PartialEq>::eq
+       87 (0.0%)      1 (0.0%)  <std::panicking::begin_panic::PanicPayload<A> as core::panic::BoxMeUp>::take_box
+       87 (0.0%)      1 (0.0%)  core::fmt::builders::DebugSet::entries
+       86 (0.0%)      1 (0.0%)  <chalk_ir::Scalar as core::hash::Hash>::hash
+       86 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::AttrOwner as core::hash::Hash>::hash
+       85 (0.0%)     17 (0.0%)  hashbrown::rustc_entry::RustcOccupiedEntry<K,V>::get
+       85 (0.0%)      1 (0.0%)  text_size::range::TextRange::checked_sub
+       84 (0.0%)      4 (0.0%)  <<alloc::vec::IntoIter<T> as core::ops::drop::Drop>::drop::DropGuard<T> as core::ops::drop::Drop>::drop
+       84 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Import as core::cmp::PartialEq>::eq
+       84 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ModKind as core::cmp::PartialEq>::eq
+       83 (0.0%)      1 (0.0%)  rowan::cursor::SyntaxNode::first_token
+       82 (0.0%)      1 (0.0%)  <ra_hir_def::visibility::Visibility as core::cmp::PartialEq>::eq
+       82 (0.0%)      1 (0.0%)  <smol_str::Repr as core::clone::Clone>::clone
+       81 (0.0%)      3 (0.0%)  <ra_hir_def::AssocItemLoc<N> as core::clone::Clone>::clone
+       81 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Impl as core::cmp::PartialEq>::eq
+       81 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Trait as core::cmp::PartialEq>::eq
+       81 (0.0%)      1 (0.0%)  core::str::SplitInternal<P>::get_end
+       80 (0.0%)      6 (0.0%)  core::iter::adapters::Map<I,F>::new
+       80 (0.0%)      1 (0.0%)  <ra_ssr::SsrPattern as core::fmt::Debug>::fmt
+       79 (0.0%)      1 (0.0%)  rowan::cursor::SyntaxNode::preorder_with_tokens
+       78 (0.0%)      2 (0.0%)  core::option::Option<T>::expect
+       78 (0.0%)      1 (0.0%)  <ra_hir_def::body::BodySourceMap as core::cmp::PartialEq>::eq
+       78 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Struct as core::cmp::PartialEq>::eq
+       78 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::TypeAlias as core::cmp::PartialEq>::eq
+       77 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::edits_for_file
+       77 (0.0%)      1 (0.0%)  ra_ssr::parsing::NodeKind::from
+       75 (0.0%)     75 (0.2%)  <core::slice::Iter<T> as core::iter::adapters::zip::TrustedRandomAccess>::may_have_side_effect
+       74 (0.0%)      1 (0.0%)  <ra_hir_def::AdtId as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_hir_def::AssocContainerId as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_hir_def::DefWithBodyId as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_hir_def::VariantId as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::CallableDef as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::TyDefId as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  <ra_tt::Leaf as core::hash::Hash>::hash
+       74 (0.0%)      1 (0.0%)  crossbeam_utils::backoff::Backoff::snooze
+       73 (0.0%)      6 (0.0%)  core::ops::function::FnMut::call_mut
+       73 (0.0%)      1 (0.0%)  <ra_tt::Leaf as core::clone::Clone>::clone
+       73 (0.0%)      1 (0.0%)  core::str::SplitInternal<P>::next
+       72 (0.0%)     24 (0.1%)  hashbrown::raw::RawTable<T>::len
+       71 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_record_field_list::{{closure}}
+       70 (0.0%)     10 (0.0%)  core::slice::<impl core::iter::traits::collect::IntoIterator for &[T]>::into_iter
+       70 (0.0%)      2 (0.0%)  <std::collections::hash::set::HashSet<T,S> as core::cmp::PartialEq>::eq
+       70 (0.0%)      1 (0.0%)  <chalk_ir::GenericArgData<I> as core::hash::Hash>::hash
+       70 (0.0%)      1 (0.0%)  <chalk_ir::WhereClause<I> as core::hash::Hash>::hash
+       70 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallKind as core::clone::Clone>::clone
+       70 (0.0%)      1 (0.0%)  core::ptr::swap_nonoverlapping_bytes
+       69 (0.0%)     23 (0.1%)  <ra_arena::Idx<T> as core::cmp::PartialEq>::eq
+       69 (0.0%)      5 (0.0%)  core::option::Option<T>::is_some
+       69 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Constraint as core::fmt::Debug>::fmt
+       69 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Placeholder as core::clone::Clone>::clone
+       68 (0.0%)     17 (0.0%)  std::collections::hash::map::OccupiedEntry<K,V>::get
+       68 (0.0%)      5 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::insert
+       68 (0.0%)      1 (0.0%)  <ra_ssr::parsing::PatternElement as core::fmt::Debug>::fmt
+       68 (0.0%)      1 (0.0%)  <rowan::utility_types::NodeOrToken<N,T> as core::fmt::Debug>::fmt
+       68 (0.0%)      1 (0.0%)  rowan::api::<impl core::convert::From<rowan::utility_types::NodeOrToken<rowan::cursor::SyntaxNode,rowan::cursor::SyntaxToken>> for rowan::utility_types::NodeOrToken<rowan::api::SyntaxNode<L>,rowan::api::SyntaxToken<L>>>::from
+       67 (0.0%)      5 (0.0%)  core::ops::function::FnOnce::call_once{{vtable.shim}}
+       67 (0.0%)      1 (0.0%)  <chalk_ir::VariableKind<I> as core::hash::Hash>::hash
+       67 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinType as core::hash::Hash>::hash
+       67 (0.0%)      1 (0.0%)  <ra_hir_expand::EagerCallLoc as core::clone::Clone>::clone
+       66 (0.0%)     22 (0.0%)  <ra_arena::Idx<T> as core::hash::Hash>::hash
+       66 (0.0%)     22 (0.0%)  core::ptr::mut_ptr::<impl *mut T>::copy_from_nonoverlapping
+       66 (0.0%)     22 (0.0%)  hashbrown::raw::Bucket<T>::as_mut
+       66 (0.0%)      6 (0.0%)  <&alloc::vec::Vec<T> as core::iter::traits::collect::IntoIterator>::into_iter
+       66 (0.0%)      2 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<&T,core::slice::Iter<T>>>::spec_extend
+       66 (0.0%)      2 (0.0%)  <core::iter::adapters::Copied<I> as core::iter::traits::iterator::Iterator>::try_fold
+       66 (0.0%)      2 (0.0%)  <ra_syntax::Parse<T> as core::cmp::PartialEq>::eq
+       66 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ExternCrate as core::cmp::PartialEq>::eq
+       66 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Static as core::cmp::PartialEq>::eq
+       66 (0.0%)      1 (0.0%)  ra_hir_ty::db::infer_wait
+       65 (0.0%)     10 (0.0%)  hashbrown::map::HashMap<K,V,S>::insert::{{closure}}
+       65 (0.0%)      1 (0.0%)  <ra_mbe::ExpandError as core::clone::Clone>::clone
+       65 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::DynTy<I>>::fmt
+       65 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Fn<I>>::fmt
+       64 (0.0%)     64 (0.1%)  <T as core::borrow::Borrow<T>>::borrow
+       64 (0.0%)     43 (0.1%)  hashbrown::map::HashMap<K,V,S>::get::{{closure}}
+       64 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::program_clauses_for_chalk_env
+       63 (0.0%)      9 (0.0%)  core::hash::impls::<impl core::hash::Hash for (A,B)>::hash
+       63 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::TraitDatum<I> as core::cmp::PartialEq>::eq
+       63 (0.0%)      1 (0.0%)  <ra_hir_def::body::Body as core::cmp::PartialEq>::eq
+       63 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Enum as core::cmp::PartialEq>::eq
+       63 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Union as core::cmp::PartialEq>::eq
+       63 (0.0%)      1 (0.0%)  <ra_hir_expand::EagerCallLoc as core::cmp::PartialEq>::eq
+       63 (0.0%)      1 (0.0%)  <ra_hir_ty::GenericPredicate as core::hash::Hash>::hash
+       63 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::repeat
+       63 (0.0%)      1 (0.0%)  hashbrown::raw::RawTable<T>::erase_no_drop
+       62 (0.0%)      2 (0.0%)  alloc::raw_vec::RawVec<T,A>::shrink_to_fit
+       62 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::lang_item
+       62 (0.0%)      1 (0.0%)  core::iter::adapters::map_try_fold::{{closure}}
+       62 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeFrom<usize>>::index
+       61 (0.0%)      1 (0.0%)  <indexmap::map::IndexMap<K,V,S> as core::iter::traits::collect::IntoIterator>::into_iter
+       61 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallKind as core::hash::Hash>::hash
+       60 (0.0%)      5 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::with_hasher
+       60 (0.0%)      2 (0.0%)  core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
+       60 (0.0%)      1 (0.0%)  <ra_ssr::matching::Match as core::fmt::Debug>::fmt
+       59 (0.0%)      7 (0.0%)  <alloc::boxed::Box<T> as core::cmp::PartialEq>::eq
+       59 (0.0%)      3 (0.0%)  ra_ssr::matching::Matcher::attempt_match_token_tree::{{closure}}
+       59 (0.0%)      1 (0.0%)  std::thread::local::fast::Key<T>::try_initialize
+       58 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::trait_solve
+       58 (0.0%)      1 (0.0%)  <ra_hir_def::nameres::diagnostics::DefDiagnostic as core::cmp::PartialEq>::eq
+       58 (0.0%)      1 (0.0%)  core::str::<impl str>::split
+       58 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::add_search_pattern
+       58 (0.0%)      1 (0.0%)  std::thread::local::fast::Key<T>::get
+       57 (0.0%)      2 (0.0%)  <core::iter::LoopState<C,B> as core::ops::try::Try>::into_result
+       57 (0.0%)      1 (0.0%)  alloc::raw_vec::RawVec<T>::into_box
+       56 (0.0%)      4 (0.0%)  alloc::vec::IntoIter<T>::as_raw_mut_slice
+       56 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Guidance as core::clone::Clone>::clone
+       56 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::Range<usize>>::index
+       56 (0.0%)      1 (0.0%)  ra_ssr::matching::PlaceholderMatch::new
+       55 (0.0%)     17 (0.0%)  <T as alloc::borrow::ToOwned>::to_owned
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabase>::set_crate_graph
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabase>::set_crate_graph_with_durability
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_file_text
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_file_text_with_durability
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_source_root
+       55 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_source_root_with_durability
+       55 (0.0%)      1 (0.0%)  <either::Either<L,R> as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  <ra_hir_def::ContainerId as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  <ra_hir_expand::HirFileIdRepr as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallId as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::ExprOrPatId as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::AssocTyValue as core::hash::Hash>::hash
+       55 (0.0%)      1 (0.0%)  hashbrown::map::HashMap<K,V,S>::remove_entry
+       54 (0.0%)      3 (0.0%)  <ra_hir_def::AssocItemLoc<N> as core::cmp::PartialEq>::eq
+       54 (0.0%)      3 (0.0%)  core::array::<impl core::convert::TryFrom<&[T]> for &[T; N]>::try_from
+       54 (0.0%)      1 (0.0%)  <core::iter::adapters::Peekable<I> as core::iter::traits::iterator::Iterator>::next
+       54 (0.0%)      1 (0.0%)  ra_ssr::matching::PlaceholderMatch::from_range
+       53 (0.0%)      1 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T,I>>::from_iter
+       53 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Obligation as core::clone::Clone>::clone
+       53 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Solution as core::clone::Clone>::clone
+       53 (0.0%)      1 (0.0%)  <ra_ssr::parsing::PatternElement as core::clone::Clone>::clone
+       53 (0.0%)      1 (0.0%)  <ra_tt::TokenTree as core::clone::Clone>::clone
+       53 (0.0%)      1 (0.0%)  <rand::distributions::uniform::UniformInt<usize> as rand::distributions::uniform::UniformSampler>::sample_single
+       53 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AliasEq<I>>::fmt
+       53 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::LifetimeOutlives<I>>::fmt
+       53 (0.0%)      1 (0.0%)  core::iter::LoopState<<R as core::ops::try::Try>::Ok,R>::from_try
+       53 (0.0%)      1 (0.0%)  ra_ssr::SsrMatches::flattened
+       52 (0.0%)      3 (0.0%)  <ra_hir_ty::Binders<T> as core::clone::Clone>::clone
+       52 (0.0%)      1 (0.0%)  <chalk_ir::AliasTy<I> as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  <chalk_ir::FromEnv<I> as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  <chalk_ir::WellFormed<I> as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Repr as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Obligation as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  <ra_tt::TokenTree as core::hash::Hash>::hash
+       52 (0.0%)      1 (0.0%)  core::iter::range::<impl core::iter::traits::double_ended::DoubleEndedIterator for core::ops::range::Range<A>>::next_back
+       52 (0.0%)      1 (0.0%)  ra_ssr::matching::Phase::next_non_trivial
+       51 (0.0%)     51 (0.1%)  <salsa::derived::AlwaysMemoizeValue as salsa::derived::MemoizationPolicy<Q>>::should_memoize_value
+       51 (0.0%)      1 (0.0%)  <T as alloc::vec::SpecFromElem>::from_elem
+       51 (0.0%)      1 (0.0%)  <ra_hir_def::data::ImplData as core::cmp::PartialEq>::eq
+       51 (0.0%)      1 (0.0%)  <ra_hir_def::data::StaticData as core::cmp::PartialEq>::eq
+       51 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroDefId as core::cmp::PartialEq>::eq
+       51 (0.0%)      1 (0.0%)  core::str::<impl str>::is_char_boundary
+       51 (0.0%)      1 (0.0%)  std::thread::local::lazy::LazyKeyInner<T>::initialize
+       50 (0.0%)      6 (0.0%)  core::iter::traits::iterator::Iterator::map
+       50 (0.0%)      4 (0.0%)  core::result::Result<T,E>::is_ok
+       50 (0.0%)      2 (0.0%)  alloc::sync::Arc<[T]>::allocate_for_slice
+       50 (0.0%)      1 (0.0%)  <alloc::sync::Arc<[T]> as core::convert::From<alloc::vec::Vec<T>>>::from
+       50 (0.0%)      1 (0.0%)  <chalk_ir::ImplId<I> as core::fmt::Debug>::fmt
+       50 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::find_matches_in_file
+       49 (0.0%)     49 (0.1%)  <[T; 2] as smallvec::Array>::size
+       49 (0.0%)      7 (0.0%)  <alloc::vec::Vec<T> as core::fmt::Debug>::fmt
+       49 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::Range<usize>>::get
+       49 (0.0%)      1 (0.0%)  std::panicking::begin_panic
+       48 (0.0%)      8 (0.0%)  <alloc::sync::Arc<T> as core::hash::Hash>::hash
+       48 (0.0%)      4 (0.0%)  salsa::plumbing::get_query_table_mut
+       48 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AliasEqBound<I> as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyDatum<I> as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::ImplDatum<I> as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <ra_hir_def::data::TypeAliasData as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Const as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ItemTree as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Mod as core::cmp::PartialEq>::eq
+       48 (0.0%)      1 (0.0%)  <ra_hir_def::nameres::ModuleData as core::cmp::PartialEq>::eq
+       47 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::intern_eager_expansion
+       47 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::intern_macro
+       47 (0.0%)      1 (0.0%)  <hashbrown::raw::bitmask::BitMaskIter as core::iter::traits::iterator::Iterator>::next
+       47 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::AssocTyValue as core::clone::Clone>::clone
+       46 (0.0%)      2 (0.0%)  <indexmap::map::ShortHash<Sz> as core::cmp::PartialEq<indexmap::HashValue>>::eq
+       46 (0.0%)      2 (0.0%)  core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &mut F>::call_once
+       46 (0.0%)      1 (0.0%)  <chalk_ir::debug::VariableKindsDebug<I> as core::fmt::Debug>::fmt::{{closure}}
+       46 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Repr as core::clone::Clone>::clone
+       46 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::InEnvironment<T> as core::clone::Clone>::clone
+       46 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ProjectionPredicate as core::clone::Clone>::clone
+       46 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::attempt_match_node_children
+       46 (0.0%)      1 (0.0%)  text_size::range::TextRange::contains_range
+       45 (0.0%)      4 (0.0%)  core::mem::zeroed
+       44 (0.0%)     22 (0.0%)  hashbrown::raw::RawTable<T>::reserve::{{closure}}
+       44 (0.0%)      4 (0.0%)  alloc::sync::Arc<T>::from_ptr
+       44 (0.0%)      2 (0.0%)  <core::ops::range::RangeFrom<usize> as core::slice::SliceIndex<[T]>>::index
+       44 (0.0%)      1 (0.0%)  core::iter::LoopState<<R as core::ops::try::Try>::Ok,R>::into_try
+       44 (0.0%)      1 (0.0%)  parking_lot::raw_rwlock::RawRwLock::try_lock_upgradable_fast
+       44 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::new
+       44 (0.0%)      1 (0.0%)  smallvec::infallible
+       43 (0.0%)      1 (0.0%)  <rowan::cursor::SyntaxToken as core::clone::Clone>::clone
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::GenericArg<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Lifetime<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClause<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::QuantifiedWhereClauses<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Ty<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Display for chalk_ir::Substitution<I>>::fmt::{{closure}}
+       43 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted
+       42 (0.0%)     14 (0.0%)  <ra_hir_expand::ast_id_map::FileAstId<N> as core::cmp::PartialEq>::eq
+       42 (0.0%)      6 (0.0%)  <alloc::vec::Vec<T> as core::hash::Hash>::hash
+       42 (0.0%)      6 (0.0%)  <ra_hir_def::ItemLoc<N> as core::hash::Hash>::hash
+       42 (0.0%)      3 (0.0%)  core::array::<impl core::convert::TryFrom<&[T]> for [T; N]>::try_from
+       42 (0.0%)      2 (0.0%)  alloc::raw_vec::RawVec<T,A>::shrink::{{closure}}
+       42 (0.0%)      2 (0.0%)  alloc::sync::Arc<[T]>::copy_from_slice
+       42 (0.0%)      1 (0.0%)  <chalk_ir::ClausePriority as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_ir::FloatTy as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_ir::Mutability as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_ir::QuantifierKind as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AdtFlags as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::ImplType as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::Polarity as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <char as core::str::pattern::Pattern>::into_searcher
+       42 (0.0%)      1 (0.0%)  <ra_db::input::Edition as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::FloatBitness as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::Signedness as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::expr::LogicOp as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::expr::Ordering as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::type_ref::Mutability as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_hir_def::type_ref::Rawness as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_syntax::ast::expr_extensions::RangeOp as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  <ra_tt::Spacing as core::cmp::PartialEq>::eq
+       42 (0.0%)      1 (0.0%)  alloc::raw_vec::alloc_guard
+       42 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Const<I>>::fmt::{{closure}}
+       42 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClauses<I>>::fmt::{{closure}}
+       42 (0.0%)      1 (0.0%)  core::str::<impl str>::find
+       42 (0.0%)      1 (0.0%)  core::str::<impl str>::rfind
+       40 (0.0%)      2 (0.0%)  <core::ops::range::RangeTo<usize> as core::slice::SliceIndex<[T]>>::index
+       40 (0.0%)      1 (0.0%)  <chalk_ir::IntTy as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <chalk_ir::TyKind as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <chalk_ir::UintTy as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::WellKnownTrait as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <core::cmp::Ordering as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <core::result::Result<T,E> as core::clone::Clone>::clone
+       40 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::IntBitness as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_def::expr::ArithOp as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_def::expr::BindingAnnotation as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_def::generics::TypeParamProvenance as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::StructDefKind as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_derive::BuiltinDeriveExpander as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_macro::BuiltinFnLikeExpander as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_macro::EagerExpander as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_ty::TyKind as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::FnTrait as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_parser::FragmentKind as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_ssr::matching::PlaceholderMatch as core::fmt::Debug>::fmt
+       40 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Placeholder as core::fmt::Debug>::fmt
+       40 (0.0%)      1 (0.0%)  <ra_syntax::ast::expr_extensions::PrefixOp as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  <ra_tt::DelimiterKind as core::cmp::PartialEq>::eq
+       40 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AdtId<I>>::fmt::{{closure}}
+       40 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AssocTypeId<I>>::fmt::{{closure}}
+       40 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::FnDefId<I>>::fmt::{{closure}}
+       40 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::TraitId<I>>::fmt::{{closure}}
+       39 (0.0%)     13 (0.0%)  <ra_hir_def::item_tree::FileItemTreeId<N> as core::cmp::PartialEq>::eq
+       39 (0.0%)     13 (0.0%)  <ra_hir_def::item_tree::FileItemTreeId<N> as core::hash::Hash>::hash
+       39 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTyId as core::cmp::PartialEq>::eq
+       39 (0.0%)      1 (0.0%)  <ra_tt::Ident as core::clone::Clone>::clone
+       39 (0.0%)      1 (0.0%)  <ra_tt::Literal as core::clone::Clone>::clone
+       39 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeTo<usize>>::index
+       38 (0.0%)      2 (0.0%)  <core::ops::range::Range<usize> as core::slice::SliceIndex<[T]>>::index
+       38 (0.0%)      2 (0.0%)  <std::collections::hash::map::HashMap<K,V,S> as core::fmt::Debug>::fmt
+       38 (0.0%)      1 (0.0%)  <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold
+       38 (0.0%)      1 (0.0%)  <ra_parser::syntax_kind::generated::SyntaxKind as core::cmp::PartialEq>::eq
+       38 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNode<L> as core::clone::Clone>::clone
+       38 (0.0%)      1 (0.0%)  <rowan::api::SyntaxToken<L> as core::clone::Clone>::clone
+       38 (0.0%)      1 (0.0%)  <smallvec::SmallVec<A> as core::ops::index::Index<I>>::index
+       38 (0.0%)      1 (0.0%)  std::thread::local::fast::destroy_value
+       37 (0.0%)      1 (0.0%)  <core::ops::range::Range<usize> as core::slice::SliceIndex<[T]>>::get
+       37 (0.0%)      1 (0.0%)  <ra_ssr::errors::SsrError as core::fmt::Display>::fmt
+       37 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ConcreteConst<I>>::fmt
+       37 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClauseData<I>>::fmt
+       37 (0.0%)      1 (0.0%)  core::iter::adapters::StepBy<I>::new
+       36 (0.0%)      4 (0.0%)  core::mem::maybe_uninit::MaybeUninit<T>::zeroed
+       36 (0.0%)      4 (0.0%)  indexmap::map::OccupiedEntry<K,V>::get
+       36 (0.0%)      3 (0.0%)  core::iter::adapters::Cloned<I>::new
+       36 (0.0%)      3 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::keys
+       36 (0.0%)      2 (0.0%)  <ra_hir_expand::InFile<T> as core::clone::Clone>::clone
+       36 (0.0%)      2 (0.0%)  <ra_hir_ty::Canonical<T> as core::cmp::PartialEq>::eq
+       36 (0.0%)      2 (0.0%)  alloc::sync::Arc<T>::from_raw
+       36 (0.0%)      1 (0.0%)  <ra_hir_def::data::TraitData as core::cmp::PartialEq>::eq
+       36 (0.0%)      1 (0.0%)  <ra_hir_def::path::GenericArgs as core::cmp::PartialEq>::eq
+       36 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Environment<I>>::fmt
+       36 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_cmpeq_epi8
+       36 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_cmpgt_epi8
+       36 (0.0%)      1 (0.0%)  core::option::Option<T>::unwrap_or
+       36 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::seq_lock::SeqLockWriteGuard::abort
+       35 (0.0%)      5 (0.0%)  alloc::vec::Vec<T>::extend_from_slice
+       35 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Constraint as core::clone::Clone>::clone
+       35 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::from_size_align
+       35 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::get_placeholder::{{closure}}
+       34 (0.0%)      2 (0.0%)  alloc::boxed::Box<T>::from_raw
+       34 (0.0%)      2 (0.0%)  core::option::Option<T>::as_ref
+       34 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_file_source_root
+       34 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::set_file_source_root_with_durability
+       34 (0.0%)      1 (0.0%)  <alloc::boxed::Box<T> as core::clone::Clone>::clone
+       34 (0.0%)      1 (0.0%)  <alloc::rc::Rc<T> as core::ops::drop::Drop>::drop
+       34 (0.0%)      1 (0.0%)  <hashbrown::raw::ProbeSeq as core::iter::traits::iterator::Iterator>::next
+       34 (0.0%)      1 (0.0%)  <ra_tt::Punct as core::cmp::PartialEq>::eq
+       34 (0.0%)      1 (0.0%)  <rowan::cursor::SyntaxToken as core::cmp::PartialEq>::eq
+       34 (0.0%)      1 (0.0%)  <thin_dst::ThinData<Head,SliceItem> as core::cmp::PartialEq>::eq
+       34 (0.0%)      1 (0.0%)  alloc::string::String::push
+       34 (0.0%)      1 (0.0%)  core::num::<impl u32>::overflowing_sub
+       34 (0.0%)      1 (0.0%)  core::num::<impl usize>::overflowing_add
+       34 (0.0%)      1 (0.0%)  core::num::<impl usize>::overflowing_mul
+       34 (0.0%)      1 (0.0%)  ra_ssr::<impl ra_ssr::matching::Match>::matched_text
+       34 (0.0%)      1 (0.0%)  smol_str::Repr::len
+       33 (0.0%)     15 (0.0%)  <T as core::convert::From<T>>::from
+       33 (0.0%)      3 (0.0%)  <T as core::convert::TryInto<U>>::try_into
+       33 (0.0%)      3 (0.0%)  hashbrown::map::HashMap<K,V,S>::contains_key
+       33 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauseImplication<I> as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AdtDatum<I> as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyValue<I> as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::FnDefDatum<I> as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::adt::FieldData as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::data::ConstData as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::expr::MatchArm as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::generics::TypeParamData as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Field as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::path::AssociatedTypeBinding as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_def::path::Path as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallLoc as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ClosureFnTraitImplData as core::cmp::PartialEq>::eq
+       33 (0.0%)      1 (0.0%)  core::core_arch::simd::i8x16::new
+       33 (0.0%)      1 (0.0%)  ra_hir_def::db::crate_def_map_wait
+       32 (0.0%)      7 (0.0%)  core::option::Option<&T>::cloned
+       32 (0.0%)      4 (0.0%)  salsa::QueryTableMut<Q>::new
+       32 (0.0%)      2 (0.0%)  ra_ssr::errors::SsrError::new
+       32 (0.0%)      2 (0.0%)  smol_str::SmolStr::new
+       32 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write::{{closure}}
+       32 (0.0%)      1 (0.0%)  <thin_dst::ThinArc<Head,SliceItem> as core::clone::Clone>::clone
+       32 (0.0%)      1 (0.0%)  core::num::<impl u32>::checked_sub
+       32 (0.0%)      1 (0.0%)  core::num::<impl usize>::checked_add
+       32 (0.0%)      1 (0.0%)  core::num::<impl usize>::checked_mul
+       32 (0.0%)      1 (0.0%)  ra_ssr::matching::is_closing_token
+       31 (0.0%)      7 (0.0%)  <&T as core::fmt::Display>::fmt
+       31 (0.0%)      1 (0.0%)  core::slice::<impl [T]>::split_at_mut
+       31 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::seq_lock::SeqLock::write
+       30 (0.0%)      2 (0.0%)  alloc::sync::Arc<T>::as_ptr
+       30 (0.0%)      2 (0.0%)  alloc::sync::set_data_ptr
+       30 (0.0%)      2 (0.0%)  alloc::vec::Vec<T>::shrink_to_fit
+       30 (0.0%)      2 (0.0%)  ra_ssr::SsrPattern::tree_for_kind_with_reason::{{closure}}
+       30 (0.0%)      2 (0.0%)  std::collections::hash::set::HashSet<T,S>::insert
+       30 (0.0%)      1 (0.0%)  <indexmap::set::IndexSet<T,S> as core::iter::traits::collect::IntoIterator>::into_iter
+       30 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLock>::unlock_shared
+       30 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallLoc as core::clone::Clone>::clone
+       30 (0.0%)      1 (0.0%)  <ra_hir_ty::Canonical<T> as core::fmt::Debug>::fmt
+       30 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::InEnvironment<T> as core::fmt::Debug>::fmt
+       30 (0.0%)      1 (0.0%)  <ra_ssr::SsrRule as core::fmt::Debug>::fmt
+       30 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Token as core::fmt::Debug>::fmt
+       30 (0.0%)      1 (0.0%)  core::fmt::Arguments::new_v1_formatted
+       30 (0.0%)      1 (0.0%)  core::num::<impl u16>::from_ne_bytes
+       30 (0.0%)      1 (0.0%)  core::num::<impl u32>::from_ne_bytes
+       30 (0.0%)      1 (0.0%)  core::num::<impl u64>::from_ne_bytes
+       30 (0.0%)      1 (0.0%)  core::sync::atomic::atomic_add
+       30 (0.0%)      1 (0.0%)  core::sync::atomic::atomic_sub
+       30 (0.0%)      1 (0.0%)  core::sync::atomic::atomic_swap
+       30 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::match_byte
+       29 (0.0%)      2 (0.0%)  alloc::raw_vec::finish_grow::{{closure}}
+       29 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLockUpgrade>::unlock_upgradable
+       29 (0.0%)      1 (0.0%)  alloc::alloc::exchange_malloc
+       28 (0.0%)      4 (0.0%)  <alloc::vec::Vec<T> as core::clone::Clone>::clone
+       28 (0.0%)      4 (0.0%)  <chalk_ir::Binders<T> as core::hash::Hash>::hash
+       28 (0.0%)      1 (0.0%)  std::thread::local::fast::Key<T>::try_register_dtor
+       27 (0.0%)      9 (0.0%)  <ra_hir_def::item_tree::FileItemTreeId<N> as core::fmt::Debug>::fmt
+       27 (0.0%)      3 (0.0%)  <std::collections::hash::map::Keys<K,V> as core::iter::traits::iterator::Iterator>::next
+       27 (0.0%)      1 (0.0%)  <chalk_ir::debug::VariableKindsDebug<I> as core::fmt::Debug>::fmt
+       27 (0.0%)      1 (0.0%)  <parking_lot::raw_mutex::RawMutex as lock_api::mutex::RawMutex>::lock
+       27 (0.0%)      1 (0.0%)  core::fmt::Arguments::new_v1
+       27 (0.0%)      1 (0.0%)  ra_ssr::SsrPattern::tree_for_kind_with_reason
+       27 (0.0%)      1 (0.0%)  ra_ssr::matching::Matcher::get_placeholder
+       27 (0.0%)      1 (0.0%)  salsa::Database::sweep_all
+       26 (0.0%)      2 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::try_fold::check
+       26 (0.0%)      2 (0.0%)  core::iter::traits::iterator::Iterator::collect
+       26 (0.0%)      2 (0.0%)  std::collections::hash::set::HashSet<T,S>::iter
+       26 (0.0%)      1 (0.0%)  <core::iter::adapters::StepBy<I> as core::iter::traits::iterator::Iterator>::next
+       26 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLock>::lock_exclusive
+       26 (0.0%)      1 (0.0%)  <thin_dst::ThinArc<Head,SliceItem> as core::cmp::PartialEq<alloc::sync::Arc<thin_dst::ThinData<Head,SliceItem>>>>::eq
+       26 (0.0%)      1 (0.0%)  <thin_dst::ThinArc<Head,SliceItem> as core::cmp::PartialEq>::eq
+       26 (0.0%)      1 (0.0%)  alloc::str::join_generic_copy::{{closure}}
+       26 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AdtId<I>>::fmt
+       26 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AssocTypeId<I>>::fmt
+       26 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::FnDefId<I>>::fmt
+       26 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::TraitId<I>>::fmt
+       26 (0.0%)      1 (0.0%)  core::fmt::num::<impl core::fmt::Debug for i32>::fmt
+       26 (0.0%)      1 (0.0%)  core::fmt::num::<impl core::fmt::Debug for usize>::fmt
+       26 (0.0%)      1 (0.0%)  core::ptr::replace
+       26 (0.0%)      1 (0.0%)  parking_lot::condvar::Condvar::new
+       26 (0.0%)      1 (0.0%)  rowan::cursor::<impl rowan::utility_types::NodeOrToken<rowan::cursor::SyntaxNode,rowan::cursor::SyntaxToken>>::first_token
+       26 (0.0%)      1 (0.0%)  std::panicking::begin_panic::PanicPayload<A>::new
+       25 (0.0%)      5 (0.0%)  <ra_syntax::ptr::AstPtr<N> as core::cmp::PartialEq>::eq
+       25 (0.0%)      5 (0.0%)  <std::collections::hash::map::HashMap<K,V,S> as core::default::Default>::default
+       25 (0.0%)      5 (0.0%)  std::thread::local::LocalKey<T>::with
+       25 (0.0%)      1 (0.0%)  alloc::rc::RcBoxPtr::inc_strong
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Const<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::GenericArg<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Lifetime<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClause<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClauses<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::QuantifiedWhereClauses<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Ty<I>>::fmt
+       25 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Display for chalk_ir::Substitution<I>>::fmt
+       25 (0.0%)      1 (0.0%)  core::iter::sources::successors
+       25 (0.0%)      1 (0.0%)  rowan::api::<impl rowan::utility_types::NodeOrToken<rowan::api::SyntaxNode<L>,rowan::api::SyntaxToken<L>>>::text_range
+       24 (0.0%)      6 (0.0%)  alloc::vec::Vec<T>::capacity
+       24 (0.0%)      5 (0.0%)  core::intrinsics::write_bytes
+       24 (0.0%)      4 (0.0%)  <lock_api::rwlock::RwLockWriteGuard<R,T> as core::ops::deref::Deref>::deref
+       24 (0.0%)      4 (0.0%)  core::iter::adapters::map_fold
+       24 (0.0%)      4 (0.0%)  indexmap::map::Size::is_same_size
+       24 (0.0%)      2 (0.0%)  <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::next
+       24 (0.0%)      2 (0.0%)  <core::ops::range::Range<usize> as core::slice::SliceIndex<[T]>>::get_unchecked
+       24 (0.0%)      2 (0.0%)  <std::collections::hash::set::HashSet<T,S> as core::default::Default>::default
+       24 (0.0%)      2 (0.0%)  indexmap::map::Pos::with_hash
+       24 (0.0%)      2 (0.0%)  ra_ssr::MatchFinder::output_debug_for_nodes_at_range::{{closure}}
+       24 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::associated_ty_value
+       24 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::fn_def_datum
+       24 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::impl_datum
+       24 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::struct_datum
+       24 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::trait_datum
+       24 (0.0%)      1 (0.0%)  <core::num::NonZeroUsize as core::cmp::PartialOrd>::partial_cmp
+       24 (0.0%)      1 (0.0%)  core::iter::adapters::Peekable<I>::new
+       24 (0.0%)      1 (0.0%)  core::iter::traits::iterator::Iterator::count::add1
+       24 (0.0%)      1 (0.0%)  core::str::<impl str>::bytes
+       24 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeFrom<usize>>::get
+       24 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeTo<usize>>::get
+       24 (0.0%)      1 (0.0%)  ra_ssr::matching::get_match
+       24 (0.0%)      1 (0.0%)  text_size::range::TextRange::new
+       23 (0.0%)      2 (0.0%)  core::iter::adapters::Enumerate<I>::new
+       23 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::attrs
+       23 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::documentation
+       23 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::generic_defaults
+       23 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::generic_predicates
+       23 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::generic_predicates_for_param
+       23 (0.0%)      1 (0.0%)  <indexmap::set::IntoIter<T> as core::iter::traits::iterator::Iterator>::collect
+       23 (0.0%)      1 (0.0%)  <ra_hir_ty::ApplicationTy as core::clone::Clone>::clone
+       23 (0.0%)      1 (0.0%)  <ra_tt::Subtree as core::clone::Clone>::clone
+       23 (0.0%)      1 (0.0%)  indexmap::map::Pos::pos
+       23 (0.0%)      1 (0.0%)  ra_hir::semantics::Semantics<DB>::new
+       23 (0.0%)      1 (0.0%)  rowan::api::<impl core::fmt::Display for rowan::utility_types::NodeOrToken<rowan::api::SyntaxNode<L>,rowan::api::SyntaxToken<L>>>::fmt
+       22 (0.0%)      2 (0.0%)  core::iter::adapters::copy_try_fold::{{closure}}
+       22 (0.0%)      2 (0.0%)  core::iter::traits::iterator::Iterator::count
+       22 (0.0%)      1 (0.0%)  <alloc::sync::Arc<[T]> as core::iter::traits::collect::FromIterator<T>>::from_iter
+       22 (0.0%)      1 (0.0%)  <alloc::sync::Arc<[T]>::from_iter_exact::Guard<T> as core::ops::drop::Drop>::drop
+       22 (0.0%)      1 (0.0%)  <core::str::pattern::MatchOnly as core::str::pattern::TwoWayStrategy>::matching
+       22 (0.0%)      1 (0.0%)  core::convert::num::ptr_try_from_impls::<impl core::convert::TryFrom<usize> for u32>::try_from
+       22 (0.0%)      1 (0.0%)  core::sync::atomic::atomic_store
+       22 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::seq_lock::SeqLock::optimistic_read
+       22 (0.0%)      1 (0.0%)  hashbrown::raw::RawTable<T>::bucket_index
+       22 (0.0%)      1 (0.0%)  indexmap::map::IndexMap<K,V,S>::keys
+       22 (0.0%)      1 (0.0%)  thin_dst::ThinData<Head,SliceItem>::fatten_const
+       21 (0.0%)      7 (0.0%)  core::option::Option<&T>::cloned::{{closure}}
+       21 (0.0%)      3 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<&T,I>>::spec_extend
+       21 (0.0%)      3 (0.0%)  <ra_hir_def::AssocItemLoc<N> as core::hash::Hash>::hash
+       21 (0.0%)      3 (0.0%)  core::array::<impl core::convert::TryFrom<&[T]> for [T; N]>::try_from::{{closure}}
+       21 (0.0%)      3 (0.0%)  core::iter::traits::iterator::Iterator::cloned
+       21 (0.0%)      3 (0.0%)  core::str::traits::<impl core::ops::index::Index<I> for str>::index
+       21 (0.0%)      1 (0.0%)  <alloc::alloc::Global as core::alloc::AllocRef>::dealloc
+       21 (0.0%)      1 (0.0%)  <crossbeam_utils::atomic::atomic_cell::AtomicCell<T> as core::fmt::Debug>::fmt
+       21 (0.0%)      1 (0.0%)  <parking_lot::raw_mutex::RawMutex as lock_api::mutex::RawMutex>::unlock
+       21 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTy as core::clone::Clone>::clone
+       21 (0.0%)      1 (0.0%)  core::iter::adapters::Peekable<I>::peek
+       21 (0.0%)      1 (0.0%)  core::num::<impl usize>::one_less_than_next_power_of_two
+       21 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::lowest_set_bit
+       20 (0.0%)      5 (0.0%)  core::cmp::PartialEq::ne
+       20 (0.0%)      4 (0.0%)  core::cell::Cell<T>::set
+       20 (0.0%)      4 (0.0%)  core::iter::traits::iterator::Iterator::for_each::call
+       20 (0.0%)      2 (0.0%)  <core::iter::LoopState<C,B> as core::ops::try::Try>::from_error
+       20 (0.0%)      2 (0.0%)  <core::iter::LoopState<C,B> as core::ops::try::Try>::from_ok
+       20 (0.0%)      1 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::fold::ok::{{closure}}
+       20 (0.0%)      1 (0.0%)  <core::ops::range::RangeTo<usize> as core::slice::SliceIndex<[T]>>::index_mut
+       20 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLock>::unlock_exclusive
+       20 (0.0%)      1 (0.0%)  <ra_hir_def::path::GenericArg as core::cmp::PartialEq>::eq
+       20 (0.0%)      1 (0.0%)  <ra_hir_ty::method_resolution::TyFingerprint as core::cmp::PartialEq>::eq
+       20 (0.0%)      1 (0.0%)  <ra_ssr::SsrMatches as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  <ra_ssr::errors::SsrError as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  <ra_ssr::matching::MatchFailureReason as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  <ra_ssr::matching::Var as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  <ra_ssr::parsing::RawSearchPattern as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  <ra_ssr::parsing::SsrTemplate as core::fmt::Debug>::fmt
+       20 (0.0%)      1 (0.0%)  core::alloc::AllocInit::init_offset
+       20 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::pad_to_align
+       20 (0.0%)      1 (0.0%)  core::str::<impl str>::chars
+       20 (0.0%)      1 (0.0%)  rowan::api::<impl rowan::utility_types::NodeOrToken<rowan::api::SyntaxNode<L>,rowan::api::SyntaxToken<L>>>::kind
+       19 (0.0%)      3 (0.0%)  <core::iter::adapters::Cloned<I> as core::iter::traits::iterator::Iterator>::next
+       19 (0.0%)      2 (0.0%)  alloc::sync::Arc<[T]>::allocate_for_slice::{{closure}}
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::generic_params
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::item_tree
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_const
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_enum
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_function
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_impl
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_static
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_struct
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_trait
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_type_alias
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::intern_union
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::ast_id_map
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::macro_def
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::callable_item_signature
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::field_types
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_assoc_ty_value
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_callable_def
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_chalk_impl
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_type_ctor
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_type_param_id
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::ty
+       19 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::value_ty
+       19 (0.0%)      1 (0.0%)  <alloc::sync::Arc<str> as core::convert::From<&str>>::from
+       19 (0.0%)      1 (0.0%)  <chalk_ir::BoundVar as core::cmp::PartialEq>::eq
+       19 (0.0%)      1 (0.0%)  <chalk_ir::Fn<I> as core::cmp::PartialEq>::eq
+       19 (0.0%)      1 (0.0%)  <chalk_ir::PlaceholderIndex as core::cmp::PartialEq>::eq
+       19 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyValueId<I> as core::fmt::Debug>::fmt
+       19 (0.0%)      1 (0.0%)  <core::ops::range::Range<usize> as core::slice::SliceIndex<[T]>>::index_mut
+       19 (0.0%)      1 (0.0%)  <hashbrown::map::IterMut<K,V> as core::iter::traits::iterator::Iterator>::next::{{closure}}
+       19 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLockUpgrade>::upgrade
+       19 (0.0%)      1 (0.0%)  core::char::methods::len_utf8
+       19 (0.0%)      1 (0.0%)  core::str::traits::<impl core::cmp::PartialEq for str>::eq
+       19 (0.0%)      1 (0.0%)  core::sync::atomic::fence
+       19 (0.0%)      1 (0.0%)  text_size::range::TextRange::cover
+       18 (0.0%)      2 (0.0%)  core::iter::adapters::TakeWhile<I,P>::new
+       18 (0.0%)      1 (0.0%)  <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter
+       18 (0.0%)      1 (0.0%)  <chalk_ir::AliasEq<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::ApplicationTy<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::ConstData<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::DynTy<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::EqGoal<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::LifetimeOutlives<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::Normalize<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::OpaqueTy<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::ProjectionTy<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_ir::TraitRef<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AdtDatumBound<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyDatumBound<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::FnDefDatumBound<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::FnDefInputsAndOutputDatum<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::ImplDatumBound<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::TraitBound<I> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <core::ops::range::Range<Idx> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLock>::lock_shared
+       18 (0.0%)      1 (0.0%)  <parking_lot::raw_rwlock::RawRwLock as lock_api::rwlock::RawRwLockUpgrade>::lock_upgradable
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::EnumVariantId as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::FieldId as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::ModuleId as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::TypeParamId as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::adt::EnumData as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::adt::EnumVariantData as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::adt::StructData as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::attr::Attr as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::body::scope::ExprScopes as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::body::scope::ScopeData as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::body::scope::ScopeEntry as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinInt as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::expr::RecordFieldPat as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::expr::RecordLitField as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::generics::GenericParams as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::generics::WherePredicate as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Variant as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_def::path::ModPath as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_expand::proc_macro::ProcMacroExpander as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::ApplicationTy as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTy as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTyId as core::hash::Hash>::hash
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::ProjectionTy as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::TraitRef as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::TypeMismatch as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::primitive::IntTy as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::InEnvironment<T> as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ProjectionPredicate as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::UnsizeToSuperTraitObjectData as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_mbe::MacroRules as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_mbe::Rule as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_ssr::parsing::Token as core::clone::Clone>::clone
+       18 (0.0%)      1 (0.0%)  <ra_syntax::ptr::SyntaxNodePtr as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_syntax::syntax_error::SyntaxError as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_tt::Delimiter as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_tt::Ident as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_tt::Literal as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <ra_tt::Subtree as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <rowan::green::node::GreenNodeHead as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <text_size::range::TextRange as core::cmp::PartialEq>::eq
+       18 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::cmp::Ord>::cmp
+       18 (0.0%)      1 (0.0%)  <u64 as rand::distributions::utils::WideningMultiply>::wmul
+       18 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::Ord for u32>::cmp
+       18 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::Ord for u8>::cmp
+       18 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::Ord for usize>::cmp
+       18 (0.0%)      1 (0.0%)  core::str::<impl str>::as_bytes
+       18 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeFrom<usize>>::get_unchecked
+       18 (0.0%)      1 (0.0%)  core::str::unwrap_or_0
+       17 (0.0%)      4 (0.0%)  core::cell::Cell<T>::get
+       17 (0.0%)      1 (0.0%)  indexmap::set::IndexSet<T,S>::iter
+       17 (0.0%)      1 (0.0%)  parking_lot::condvar::Condvar::notify_one
+       16 (0.0%)      4 (0.0%)  <&mut I as core::iter::traits::exact_size::ExactSizeIterator>::len
+       16 (0.0%)      4 (0.0%)  <ra_syntax::ptr::AstPtr<N> as core::hash::Hash>::hash
+       16 (0.0%)      4 (0.0%)  alloc::vec::Vec<T>::is_empty
+       16 (0.0%)      4 (0.0%)  ra_ssr::matching::record_match_fails_reasons_scope::{{closure}}
+       16 (0.0%)      2 (0.0%)  alloc::sync::Arc<T>::allocate_for_layout::{{closure}}
+       16 (0.0%)      1 (0.0%)  <chalk_ir::Environment<I> as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauses<I> as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <chalk_ir::debug::SeparatorTraitRef<I> as core::fmt::Debug>::fmt
+       16 (0.0%)      1 (0.0%)  <chalk_ir::debug::SeparatorTraitRef<I> as core::fmt::Debug>::fmt::{{closure}}
+       16 (0.0%)      1 (0.0%)  <core::mem::manually_drop::ManuallyDrop<T> as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <indexmap::set::IndexSet<T,S> as core::fmt::Debug>::fmt
+       16 (0.0%)      1 (0.0%)  <ra_hir_def::attr::Attrs as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <ra_hir_def::docs::Documentation as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <ra_hir_expand::EagerCallLoc as core::hash::Hash>::hash
+       16 (0.0%)      1 (0.0%)  <ra_hir_ty::FnSig as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <ra_hir_ty::ProjectionTy as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <ra_hir_ty::Substs as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <ra_hir_ty::TraitRef as core::clone::Clone>::clone
+       16 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNode<L> as core::cmp::PartialEq>::ne
+       16 (0.0%)      1 (0.0%)  <thin_dst::ThinArc<Head,SliceItem> as core::ops::drop::Drop>::drop
+       16 (0.0%)      1 (0.0%)  <usize as core::iter::range::Step>::forward_checked
+       16 (0.0%)      1 (0.0%)  <usize as rand::distributions::utils::WideningMultiply>::wmul
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AliasTy<I>>::fmt
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::AliasTy<I>>::fmt::{{closure}}
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ApplicationTy<I>>::fmt
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ApplicationTy<I>>::fmt::{{closure}}
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClauseImplication<I>>::fmt
+       16 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::ProgramClauseImplication<I>>::fmt::{{closure}}
+       16 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::Range<usize>>::get_unchecked
+       16 (0.0%)      1 (0.0%)  salsa::Database::sweep_all::{{closure}}
+       15 (0.0%)      5 (0.0%)  alloc::slice::<impl [T]>::to_vec
+       15 (0.0%)      5 (0.0%)  alloc::vec::Vec<T>::set_len
+       15 (0.0%)      5 (0.0%)  core::ptr::mut_ptr::<impl *mut T>::write_bytes
+       15 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabase>::parse
+       15 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::body_with_source_map
+       15 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_impl_trait_id
+       15 (0.0%)      1 (0.0%)  <rowan::api::SyntaxToken<L> as core::convert::From<rowan::cursor::SyntaxToken>>::from
+       15 (0.0%)      1 (0.0%)  core::core_arch::x86::m128iExt::as_i8x16
+       15 (0.0%)      1 (0.0%)  hashbrown::map::HashMap<K,V,S>::iter_mut
+       15 (0.0%)      1 (0.0%)  indexmap::map::split_lo_hi
+       15 (0.0%)      1 (0.0%)  ra_ssr::matching::get_match::{{closure}}
+       14 (0.0%)      2 (0.0%)  alloc::boxed::Box<T>::into_raw
+       14 (0.0%)      2 (0.0%)  core::cell::Cell<T>::new
+       14 (0.0%)      2 (0.0%)  core::iter::traits::iterator::Iterator::enumerate
+       14 (0.0%)      2 (0.0%)  core::slice::Iter<T>::as_slice
+       14 (0.0%)      1 (0.0%)  <std::panicking::begin_panic::PanicPayload<A> as core::panic::BoxMeUp>::get
+       14 (0.0%)      1 (0.0%)  <usize as core::slice::SliceIndex<[T]>>::get
+       14 (0.0%)      1 (0.0%)  alloc::str::<impl alloc::borrow::ToOwned for str>::to_owned
+       14 (0.0%)      1 (0.0%)  alloc::str::<impl alloc::slice::Join<&str> for [S]>::join
+       14 (0.0%)      1 (0.0%)  alloc::sync::data_offset_align
+       14 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::from_size_align_unchecked
+       14 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_movemask_epi8
+       14 (0.0%)      1 (0.0%)  core::fmt::Write::write_fmt
+       14 (0.0%)      1 (0.0%)  core::ptr::non_null::NonNull<T>::new
+       14 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::Range<usize>>::index::{{closure}}
+       14 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeFrom<usize>>::index::{{closure}}
+       14 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::children
+       14 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::children_with_tokens
+       14 (0.0%)      1 (0.0%)  std::panicking::panic_count::is_zero
+       13 (0.0%)      1 (0.0%)  <chalk_ir::ClausePriority as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <chalk_ir::FloatTy as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <chalk_ir::Mutability as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <chalk_ir::QuantifierKind as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <core::option::Option<T> as core::ops::try::Try>::from_ok
+       13 (0.0%)      1 (0.0%)  <hashbrown::map::IterMut<K,V> as core::iter::traits::iterator::Iterator>::next
+       13 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::FloatBitness as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::Signedness as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <ra_hir_def::type_ref::Mutability as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroDefId as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Name as core::clone::Clone>::clone
+       13 (0.0%)      1 (0.0%)  <ra_hir_ty::method_resolution::TyFingerprint as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::SolutionVariables as core::clone::Clone>::clone
+       13 (0.0%)      1 (0.0%)  <ra_ssr::parsing::SsrTemplate as core::clone::Clone>::clone
+       13 (0.0%)      1 (0.0%)  <ra_tt::Spacing as core::hash::Hash>::hash
+       13 (0.0%)      1 (0.0%)  <smol_str::SmolStr as core::clone::Clone>::clone
+       13 (0.0%)      1 (0.0%)  <thin_dst::ThinArc<Head,SliceItem> as core::convert::From<alloc::sync::Arc<thin_dst::ThinData<Head,SliceItem>>>>::from
+       13 (0.0%)      1 (0.0%)  alloc::string::String::from_utf8_unchecked
+       13 (0.0%)      1 (0.0%)  alloc::vec::SetLenOnDrop::new
+       13 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::padding_needed_for
+       13 (0.0%)      1 (0.0%)  core::char::methods::<impl char>::encode_utf8
+       13 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_undefined_si128
+       13 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeTo<usize>>::get_unchecked
+       13 (0.0%)      1 (0.0%)  hashbrown::raw::h2
+       13 (0.0%)      1 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::iter_mut
+       12 (0.0%)      4 (0.0%)  salsa::QueryTableMut<Q>::set
+       12 (0.0%)      3 (0.0%)  core::result::Result<T,E>::is_err
+       12 (0.0%)      3 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::contains_key
+       12 (0.0%)      3 (0.0%)  std::collections::hash::set::HashSet<T,S>::contains
+       12 (0.0%)      2 (0.0%)  <std::collections::hash::set::HashSet<T,S> as core::cmp::PartialEq>::eq::{{closure}}
+       12 (0.0%)      2 (0.0%)  indexmap::map::ShortHashProxy<Sz>::new
+       12 (0.0%)      1 (0.0%)  <&mut W as core::fmt::Write>::write_fmt
+       12 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::parse_or_expand
+       12 (0.0%)      1 (0.0%)  <alloc::string::String as core::ops::deref::Deref>::deref
+       12 (0.0%)      1 (0.0%)  <alloc::string::String as core::ops::index::Index<core::ops::range::RangeFull>>::index
+       12 (0.0%)      1 (0.0%)  <chalk_ir::IntTy as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <chalk_ir::TyKind as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <chalk_ir::UintTy as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <core::ops::range::Range<usize> as core::slice::SliceIndex<[T]>>::get_unchecked_mut
+       12 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::IntBitness as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_derive::BuiltinDeriveExpander as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_macro::BuiltinFnLikeExpander as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_hir_expand::builtin_macro::EagerExpander as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_hir_ty::TyKind as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::FnTrait as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_parser::FragmentKind as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <ra_ssr::SsrMatches as core::default::Default>::default
+       12 (0.0%)      1 (0.0%)  <ra_text_edit::TextEditBuilder as core::default::Default>::default
+       12 (0.0%)      1 (0.0%)  <ra_tt::DelimiterKind as core::hash::Hash>::hash
+       12 (0.0%)      1 (0.0%)  <salsa::durability::Durability as core::cmp::PartialOrd>::ge
+       12 (0.0%)      1 (0.0%)  <salsa::revision::Revision as core::cmp::PartialOrd>::gt
+       12 (0.0%)      1 (0.0%)  <salsa::revision::Revision as core::cmp::PartialOrd>::le
+       12 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::cmp::PartialOrd>::le
+       12 (0.0%)      1 (0.0%)  alloc::alloc::alloc
+       12 (0.0%)      1 (0.0%)  alloc::alloc::alloc_zeroed
+       12 (0.0%)      1 (0.0%)  alloc::alloc::dealloc
+       12 (0.0%)      1 (0.0%)  alloc::alloc::realloc
+       12 (0.0%)      1 (0.0%)  alloc::string::String::new
+       12 (0.0%)      1 (0.0%)  core::any::TypeId::of
+       12 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_set_epi8
+       12 (0.0%)      1 (0.0%)  core::iter::adapters::Copied<I>::new
+       12 (0.0%)      1 (0.0%)  core::iter::adapters::Rev<T>::new
+       12 (0.0%)      1 (0.0%)  core::slice::<impl [T]>::first
+       12 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU8::compare_exchange
+       12 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU8::compare_exchange_weak
+       12 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::lowest_set_bit_nonzero
+       12 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::add_rule
+       12 (0.0%)      1 (0.0%)  ra_ssr::matching::PatternIterator::new
+       12 (0.0%)      1 (0.0%)  ra_ssr::parsing::<impl core::str::FromStr for ra_ssr::SsrRule>::from_str::{{closure}}
+       12 (0.0%)      1 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::values_mut
+       11 (0.0%)      2 (0.0%)  alloc::boxed::Box<T>::new
+       11 (0.0%)      1 (0.0%)  <&T as core::convert::AsRef<U>>::as_ref
+       11 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabase>::crate_graph
+       11 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::file_source_root
+       11 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::file_text
+       11 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::source_root
+       11 (0.0%)      1 (0.0%)  <DB as ra_db::SourceDatabaseExt>::source_root_crates
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::body
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::const_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::crate_def_map_query
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::crate_lang_items
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::enum_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::expr_scopes
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::function_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::impl_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::import_map
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::module_lang_items
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::static_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::struct_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::trait_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::type_alias_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::union_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_const
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_enum
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_function
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_impl
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_static
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_struct
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_trait
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_type_alias
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::InternDatabase>::lookup_intern_union
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::expand_proc_macro
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::lookup_intern_eager_expansion
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::lookup_intern_macro
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::macro_arg
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::macro_expand
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_expand::db::AstDatabase>::parse_macro
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::associated_ty_data
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::impl_self_ty
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::impl_trait
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::infer_query
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::inherent_impls_in_crate
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::intern_impl_trait_id
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_assoc_ty_value
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_callable_def
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_chalk_impl
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_type_ctor
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::lookup_intern_type_param_id
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::return_type_impl_traits
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::trait_impls_in_crate
+       11 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::trait_impls_in_deps
+       11 (0.0%)      1 (0.0%)  <alloc::string::String as core::cmp::PartialEq>::eq
+       11 (0.0%)      1 (0.0%)  <core::iter::adapters::Copied<I> as core::iter::traits::iterator::Iterator>::next
+       11 (0.0%)      1 (0.0%)  <ra_parser::syntax_kind::generated::SyntaxKind as core::hash::Hash>::hash
+       11 (0.0%)      1 (0.0%)  <rowan::api::SyntaxElementChildren<L> as core::iter::traits::iterator::Iterator>::next
+       11 (0.0%)      1 (0.0%)  <smallvec::SmallVec<A> as core::cmp::PartialEq<smallvec::SmallVec<B>>>::eq
+       11 (0.0%)      1 (0.0%)  alloc::boxed::Box<[core::mem::maybe_uninit::MaybeUninit<T>]>::assume_init
+       11 (0.0%)      1 (0.0%)  alloc::str::join_generic_copy::{{closure}}::{{closure}}
+       11 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_set_epi64x
+       11 (0.0%)      1 (0.0%)  core::iter::traits::iterator::Iterator::peekable
+       11 (0.0%)      1 (0.0%)  core::num::<impl u16>::leading_zeros
+       11 (0.0%)      1 (0.0%)  core::num::<impl u16>::trailing_zeros
+       11 (0.0%)      1 (0.0%)  core::num::<impl u64>::rotate_right
+       11 (0.0%)      1 (0.0%)  core::num::<impl usize>::count_ones
+       11 (0.0%)      1 (0.0%)  core::num::<impl usize>::leading_zeros
+       11 (0.0%)      1 (0.0%)  core::num::<impl usize>::rotate_left
+       11 (0.0%)      1 (0.0%)  hashbrown::map::HashMap<K,V,S>::remove
+       11 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::load
+       11 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::load_aligned
+       11 (0.0%)      1 (0.0%)  log::max_level
+       11 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::preorder_with_tokens
+       11 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::preorder_with_tokens::{{closure}}
+       11 (0.0%)      1 (0.0%)  text_size::size::TextSize::checked_sub
+       10 (0.0%)      4 (0.0%)  smol_str::Repr::new::{{closure}}
+       10 (0.0%)      2 (0.0%)  alloc::sync::data_offset
+       10 (0.0%)      2 (0.0%)  core::cmp::impls::<impl core::cmp::PartialEq<&B> for &A>::ne
+       10 (0.0%)      2 (0.0%)  core::slice::<impl [T]>::get
+       10 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauseImplication<I> as core::hash::Hash>::hash
+       10 (0.0%)      1 (0.0%)  <crossbeam_utils::atomic::seq_lock::SeqLockWriteGuard as core::ops::drop::Drop>::drop
+       10 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallLoc as core::hash::Hash>::hash
+       10 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ClosureFnTraitImplData as core::hash::Hash>::hash
+       10 (0.0%)      1 (0.0%)  <ra_ssr::parsing::NodeKind as core::fmt::Debug>::fmt
+       10 (0.0%)      1 (0.0%)  <ra_tt::Punct as core::hash::Hash>::hash
+       10 (0.0%)      1 (0.0%)  core::num::<impl i32>::unchecked_add
+       10 (0.0%)      1 (0.0%)  core::num::<impl u128>::wrapping_mul
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::saturating_add
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::unchecked_add
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::unchecked_sub
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::wrapping_add
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::wrapping_mul
+       10 (0.0%)      1 (0.0%)  core::num::<impl usize>::wrapping_sub
+       10 (0.0%)      1 (0.0%)  core::option::Option<&T>::copied
+       10 (0.0%)      1 (0.0%)  core::ptr::const_ptr::<impl *const T>::wrapping_offset
+       10 (0.0%)      1 (0.0%)  core::ptr::read_volatile
+       10 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU16::compare_exchange_weak
+       10 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU32::compare_exchange_weak
+       10 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU64::compare_exchange_weak
+       10 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::compare_exchange
+       10 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::compare_exchange_weak
+       10 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::match_empty_or_deleted
+       10 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::first_child_or_token
+       10 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::first_token
+        9 (0.0%)      3 (0.0%)  <core::iter::adapters::Cloned<I> as core::iter::traits::iterator::Iterator>::size_hint
+        9 (0.0%)      3 (0.0%)  core::str::<impl str>::parse
+        9 (0.0%)      3 (0.0%)  ra_ssr::parsing::parse_placeholder::{{closure}}
+        9 (0.0%)      1 (0.0%)  <core::str::Bytes as core::iter::traits::iterator::Iterator>::next
+        9 (0.0%)      1 (0.0%)  <core::str::pattern::RejectAndMatch as core::str::pattern::TwoWayStrategy>::matching
+        9 (0.0%)      1 (0.0%)  <core::str::pattern::RejectAndMatch as core::str::pattern::TwoWayStrategy>::rejecting
+        9 (0.0%)      1 (0.0%)  <std::collections::hash::map::ValuesMut<K,V> as core::iter::traits::iterator::Iterator>::next
+        9 (0.0%)      1 (0.0%)  alloc::rc::RcBoxPtr::dec_strong
+        9 (0.0%)      1 (0.0%)  alloc::rc::RcBoxPtr::dec_weak
+        9 (0.0%)      1 (0.0%)  core::char::convert::from_u32_unchecked
+        9 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_loadu_si128
+        9 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for str>::hash
+        9 (0.0%)      1 (0.0%)  core::num::<impl usize>::checked_next_power_of_two
+        9 (0.0%)      1 (0.0%)  core::str::pattern::TwoWaySearcher::byteset_contains
+        9 (0.0%)      1 (0.0%)  core::str::traits::<impl core::slice::SliceIndex<str> for core::ops::range::RangeTo<usize>>::index::{{closure}}
+        9 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::AtomicCell<T>::compare_exchange
+        9 (0.0%)      1 (0.0%)  hashbrown::map::HashMap<K,V,S>::remove_entry::{{closure}}
+        9 (0.0%)      1 (0.0%)  indexmap::Bucket<K,V>::key
+        9 (0.0%)      1 (0.0%)  rand_pcg::pcg128::output_xsl_rr
+        9 (0.0%)      1 (0.0%)  rustc_hash::FxHasher::add_to_hash
+        9 (0.0%)      1 (0.0%)  salsa::runtime::Runtime::current_revision
+        8 (0.0%)      2 (0.0%)  <alloc::boxed::Box<T> as core::fmt::Debug>::fmt
+        8 (0.0%)      2 (0.0%)  <std::collections::hash::set::Iter<K> as core::iter::traits::iterator::Iterator>::next
+        8 (0.0%)      2 (0.0%)  core::option::Option<T>::is_none
+        8 (0.0%)      2 (0.0%)  indexmap::map::ShortHash<Sz>::into_hash
+        8 (0.0%)      2 (0.0%)  std::collections::hash::set::HashSet<T,S>::len
+        8 (0.0%)      1 (0.0%)  <T as ra_db::CheckCanceled>::check_canceled
+        8 (0.0%)      1 (0.0%)  <core::str::Split<P> as core::iter::traits::iterator::Iterator>::next
+        8 (0.0%)      1 (0.0%)  <core::str::pattern::StrSearcher as core::str::pattern::Searcher>::haystack
+        8 (0.0%)      1 (0.0%)  <log::Level as core::cmp::PartialOrd<log::LevelFilter>>::le
+        8 (0.0%)      1 (0.0%)  <rand_pcg::pcg128::Mcg128Xsl64 as rand_core::RngCore>::next_u64
+        8 (0.0%)      1 (0.0%)  <std::collections::hash::map::IterMut<K,V> as core::iter::traits::iterator::Iterator>::next
+        8 (0.0%)      1 (0.0%)  alloc::string::String::push_str
+        8 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl chalk_ir::TraitRef<I>>::with_colon
+        8 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for bool>::hash
+        8 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicPtr<T>::load
+        8 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicPtr<T>::new
+        8 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::new
+        8 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::lock
+        8 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::match_full
+        8 (0.0%)      1 (0.0%)  parking_lot::raw_rwlock::RawRwLock::deadlock_acquire
+        8 (0.0%)      1 (0.0%)  parking_lot::raw_rwlock::RawRwLock::deadlock_release
+        8 (0.0%)      1 (0.0%)  rowan::api::SyntaxToken<L>::text_range
+        8 (0.0%)      1 (0.0%)  smol_str::SmolStr::as_str
+        7 (0.0%)      7 (0.0%)  <core::marker::PhantomData<T> as core::cmp::PartialEq>::eq
+        7 (0.0%)      1 (0.0%)  <alloc::string::String as core::convert::AsRef<str>>::as_ref
+        7 (0.0%)      1 (0.0%)  <alloc::string::String as core::fmt::Debug>::fmt
+        7 (0.0%)      1 (0.0%)  <alloc::string::String as core::fmt::Display>::fmt
+        7 (0.0%)      1 (0.0%)  <alloc::string::String as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <alloc::sync::Arc<[T]> as alloc::sync::ArcFromSlice<T>>::from_slice
+        7 (0.0%)      1 (0.0%)  <alloc::sync::Arc<[T]> as core::convert::From<&[T]>>::from
+        7 (0.0%)      1 (0.0%)  <chalk_ir::AliasEq<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::ApplicationTy<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::BoundVar as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <chalk_ir::BoundVar as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::ConstData<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::DynTy<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::EqGoal<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::Fn<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::LifetimeOutlives<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::Normalize<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::OpaqueTy<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::PlaceholderIndex as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::ProjectionTy<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <chalk_ir::TraitRef<I> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <core::iter::adapters::Rev<I> as core::iter::traits::iterator::Iterator>::next
+        7 (0.0%)      1 (0.0%)  <core::str::Chars as core::iter::traits::iterator::Iterator>::next
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::DefWithBodyId as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::EnumVariantId as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::FieldId as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::ModuleId as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::ModuleId as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::TypeParamId as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinInt as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_def::lang_item::LangItemTarget as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroCallId as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroFile as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_expand::proc_macro::ProcMacroExpander as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::ApplicationTy as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::Canonical<T> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTy as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::OpaqueTyId as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::ProjectionTy as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::TraitRef as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::InferTy as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::primitive::IntTy as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::InEnvironment<T> as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ProjectionPredicate as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::UnsizeToSuperTraitObjectData as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_syntax::ptr::SyntaxNodePtr as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_tt::Delimiter as core::clone::Clone>::clone
+        7 (0.0%)      1 (0.0%)  <ra_tt::Delimiter as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_tt::Ident as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_tt::Literal as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <ra_tt::Subtree as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <smol_str::SmolStr as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  <text_size::range::TextRange as core::hash::Hash>::hash
+        7 (0.0%)      1 (0.0%)  alloc::str::<impl core::borrow::Borrow<str> for alloc::string::String>::borrow
+        7 (0.0%)      1 (0.0%)  alloc::string::String::as_str
+        7 (0.0%)      1 (0.0%)  core::iter::traits::iterator::Iterator::copied
+        7 (0.0%)      1 (0.0%)  core::iter::traits::iterator::Iterator::rev
+        7 (0.0%)      1 (0.0%)  core::slice::<impl [T]>::get_unchecked_mut
+        7 (0.0%)      1 (0.0%)  core::str::<impl core::convert::AsRef<[u8]> for str>::as_ref
+        7 (0.0%)      1 (0.0%)  core::str::<impl str>::get_unchecked
+        7 (0.0%)      1 (0.0%)  core::str::<impl str>::len
+        7 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::seq_lock::SeqLock::validate_read
+        7 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::store_aligned
+        7 (0.0%)      1 (0.0%)  indexmap::util::enumerate
+        7 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::text_range
+        7 (0.0%)      1 (0.0%)  salsa::runtime::Runtime::pending_revision
+        7 (0.0%)      1 (0.0%)  smol_str::SmolStr::to_string
+        7 (0.0%)      1 (0.0%)  thin_dst::polyfill::slice_from_raw_parts::make_slice
+        6 (0.0%)      2 (0.0%)  <alloc::vec::Vec<T> as core::default::Default>::default
+        6 (0.0%)      2 (0.0%)  <core::str::Bytes as core::iter::traits::iterator::Iterator>::all
+        6 (0.0%)      2 (0.0%)  <ra_hir_def::item_tree::IdRange<T> as core::cmp::PartialEq>::eq
+        6 (0.0%)      2 (0.0%)  <ra_hir_expand::ast_id_map::FileAstId<N> as core::hash::Hash>::hash
+        6 (0.0%)      2 (0.0%)  core::cmp::Ord::max
+        6 (0.0%)      2 (0.0%)  core::cmp::Ord::min
+        6 (0.0%)      2 (0.0%)  core::cmp::max
+        6 (0.0%)      2 (0.0%)  core::cmp::min
+        6 (0.0%)      2 (0.0%)  core::iter::adapters::copy_try_fold
+        6 (0.0%)      2 (0.0%)  core::iter::traits::iterator::Iterator::take_while
+        6 (0.0%)      2 (0.0%)  ra_ssr::parsing::parse_constraint::{{closure}}
+        6 (0.0%)      1 (0.0%)  <T as core::convert::TryFrom<U>>::try_from
+        6 (0.0%)      1 (0.0%)  <alloc::rc::Rc<T> as core::clone::Clone>::clone
+        6 (0.0%)      1 (0.0%)  <alloc::vec::SetLenOnDrop as core::ops::drop::Drop>::drop
+        6 (0.0%)      1 (0.0%)  <chalk_ir::AssocTypeId<I> as core::clone::Clone>::clone
+        6 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNode<L> as core::convert::From<rowan::cursor::SyntaxNode>>::from
+        6 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNodeChildren<L> as core::iter::traits::iterator::Iterator>::next
+        6 (0.0%)      1 (0.0%)  <rowan::cursor::SyntaxNode as core::clone::Clone>::clone
+        6 (0.0%)      1 (0.0%)  <rowan::green::node::GreenNode as core::clone::Clone>::clone
+        6 (0.0%)      1 (0.0%)  alloc::rc::Rc<T>::from_inner
+        6 (0.0%)      1 (0.0%)  alloc::rc::RcBoxPtr::strong
+        6 (0.0%)      1 (0.0%)  alloc::rc::RcBoxPtr::weak
+        6 (0.0%)      1 (0.0%)  alloc::vec::SetLenOnDrop::increment_len
+        6 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::dangling
+        6 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialOrd for u32>::partial_cmp
+        6 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialOrd for u8>::partial_cmp
+        6 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialOrd for usize>::partial_cmp
+        6 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_or_si128
+        6 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for char>::hash
+        6 (0.0%)      1 (0.0%)  core::iter::adapters::Peekable<I>::peek::{{closure}}
+        6 (0.0%)      1 (0.0%)  core::iter::adapters::map_try_fold
+        6 (0.0%)      1 (0.0%)  core::str::utf8_first_byte
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU16::load
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU32::load
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU64::load
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicU8::load
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::fetch_add
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::fetch_sub
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::load
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::store
+        6 (0.0%)      1 (0.0%)  core::sync::atomic::AtomicUsize::swap
+        6 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::AtomicCell<T>::new
+        6 (0.0%)      1 (0.0%)  crossbeam_utils::backoff::Backoff::new
+        6 (0.0%)      1 (0.0%)  hashbrown::map::HashMap<K,V,S>::remove::{{closure}}
+        6 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::remove_lowest_bit
+        6 (0.0%)      1 (0.0%)  hashbrown::raw::sse2::Group::match_empty
+        6 (0.0%)      1 (0.0%)  indexmap::map::probe_distance
+        6 (0.0%)      1 (0.0%)  rowan::api::SyntaxToken<L>::kind
+        6 (0.0%)      1 (0.0%)  rowan::utility_types::NodeOrToken::Node
+        6 (0.0%)      1 (0.0%)  thin_dst::ThinArc<Head,SliceItem>::from_erased
+        5 (0.0%)      3 (0.0%)  <std::collections::hash::map::Keys<K,V> as core::iter::traits::iterator::Iterator>::next::{{closure}}
+        5 (0.0%)      1 (0.0%)  <chalk_ir::ConcreteConst<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::GenericArg<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::Goals<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::Lifetime<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClause<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauseData<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::QuantifiedWhereClauses<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::Substitution<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::Ty<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_ir::VariableKinds<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::TraitDatumBound<I> as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <core::ptr::non_null::NonNull<T> as core::convert::From<core::ptr::unique::Unique<T>>>::from
+        5 (0.0%)      1 (0.0%)  <indexmap::set::Iter<T> as core::iter::traits::iterator::Iterator>::next
+        5 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::GenericParamsStorage as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::ItemVisibilities as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_def::lang_item::LangItems as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_expand::HirFileId as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_expand::ast_id_map::AstIdMap as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Name as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::ReturnTypeImplTrait as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::ReturnTypeImplTraits as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::method_resolution::InherentImpls as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::method_resolution::TraitImpls as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::SolutionVariables as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::TraitEnvironment as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_mbe::syntax_bridge::TokenMap as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <ra_ssr::matching::Var as core::cmp::PartialEq>::eq
+        5 (0.0%)      1 (0.0%)  <usize as core::ops::arith::AddAssign>::add_assign
+        5 (0.0%)      1 (0.0%)  <usize as core::slice::SliceIndex<[T]>>::get_unchecked
+        5 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl chalk_ir::VariableKinds<I>>::debug
+        5 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::align
+        5 (0.0%)      1 (0.0%)  core::char::methods::<impl char>::len_utf8
+        5 (0.0%)      1 (0.0%)  core::core_arch::simd::i64x2::new
+        5 (0.0%)      1 (0.0%)  core::str::utf8_acc_cont_byte
+        5 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::AtomicCell<T>::load
+        5 (0.0%)      1 (0.0%)  hashbrown::raw::Bucket<T>::read
+        5 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::invert
+        5 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::leading_zeros
+        5 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::trailing_zeros
+        5 (0.0%)      1 (0.0%)  ra_ssr::replacing::matches_to_edit
+        5 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::kind
+        5 (0.0%)      1 (0.0%)  std::thread::local::lazy::LazyKeyInner<T>::get
+        5 (0.0%)      1 (0.0%)  std::thread::local::lazy::LazyKeyInner<T>::take
+        4 (0.0%)      2 (0.0%)  <ra_hir_expand::ast_id_map::FileAstId<N> as core::clone::Clone>::clone
+        4 (0.0%)      2 (0.0%)  core::slice::<impl [T]>::as_mut_ptr
+        4 (0.0%)      1 (0.0%)  <&mut W as core::fmt::Write>::write_char
+        4 (0.0%)      1 (0.0%)  <&mut W as core::fmt::Write>::write_str
+        4 (0.0%)      1 (0.0%)  <alloc::boxed::Box<T> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::ConcreteConst<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::DebruijnIndex as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <chalk_ir::GenericArg<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::Goals<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::InferenceVar as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <chalk_ir::Lifetime<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClause<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauseData<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::QuantifiedWhereClauses<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::Substitution<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::Ty<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <chalk_ir::UniverseIndex as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <chalk_ir::VariableKinds<I> as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <core::hash::BuildHasherDefault<H> as core::default::Default>::default
+        4 (0.0%)      1 (0.0%)  <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::size_hint
+        4 (0.0%)      1 (0.0%)  <core::num::NonZeroU32 as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <core::num::NonZeroUsize as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <core::result::Result<T,E> as core::ops::try::Try>::from_ok
+        4 (0.0%)      1 (0.0%)  <hashbrown::raw::bitmask::BitMask as core::iter::traits::collect::IntoIterator>::into_iter
+        4 (0.0%)      1 (0.0%)  <i32 as core::iter::range::Step>::forward_unchecked
+        4 (0.0%)      1 (0.0%)  <ra_arena::RawId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_db::FileRange as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_db::input::CrateId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_db::input::ProcMacroId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_db::input::SourceRootId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::AttrDefId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::GenericDefId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::TypeParamId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::VariantId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::GenericParamsId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::RawVisibilityId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_hir_expand::HirFileId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_expand::HirFileId as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroDefId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_expand::name::Name as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::TypeCtor as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::unify::TypeVarId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::CallableDef as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::TyDefId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::lower::ValueTyDefId as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::ClosureFnTraitImplData as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::Impl as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_hir_ty::traits::TraitEnvironment as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <ra_mbe::Shift as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <ra_ssr::matching::Var as core::hash::Hash>::hash
+        4 (0.0%)      1 (0.0%)  <ra_tt::Punct as core::clone::Clone>::clone
+        4 (0.0%)      1 (0.0%)  <ra_tt::TokenId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <rowan::api::SyntaxToken<L> as core::fmt::Display>::fmt
+        4 (0.0%)      1 (0.0%)  <rowan::green::SyntaxKind as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write_u16
+        4 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write_u32
+        4 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write_u8
+        4 (0.0%)      1 (0.0%)  <salsa::runtime::RuntimeId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::convert::From<u32>>::from
+        4 (0.0%)      1 (0.0%)  <vfs::FileId as core::cmp::PartialEq>::eq
+        4 (0.0%)      1 (0.0%)  <vfs::FileId as core::cmp::PartialEq>::ne
+        4 (0.0%)      1 (0.0%)  alloc::string::String::shrink_to_fit
+        4 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialEq for u32>::eq
+        4 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialEq for usize>::eq
+        4 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialOrd for i32>::lt
+        4 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialOrd for usize>::lt
+        4 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for &T>::hash
+        4 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for isize>::hash
+        4 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for u16>::hash
+        4 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for u32>::hash
+        4 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for usize>::hash
+        4 (0.0%)      1 (0.0%)  core::num::<impl usize>::is_power_of_two
+        4 (0.0%)      1 (0.0%)  core::num::NonZeroUsize::new_unchecked
+        4 (0.0%)      1 (0.0%)  core::ptr::non_null::NonNull<T>::as_mut
+        4 (0.0%)      1 (0.0%)  indexmap::set::IndexSet<T,S>::is_empty
+        4 (0.0%)      1 (0.0%)  ra_hir::semantics::Semantics<DB>::expand
+        4 (0.0%)      1 (0.0%)  ra_hir::semantics::Semantics<DB>::original_range
+        4 (0.0%)      1 (0.0%)  ra_hir::semantics::Semantics<DB>::parse
+        4 (0.0%)      1 (0.0%)  ra_ssr::matching::recording_match_fail_reasons
+        4 (0.0%)      1 (0.0%)  rand::Rng::gen
+        4 (0.0%)      1 (0.0%)  rowan::api::SyntaxToken<L>::text
+        4 (0.0%)      1 (0.0%)  smol_str::SmolStr::len
+        4 (0.0%)      1 (0.0%)  std::collections::hash::map::HashMap<K,V,S>::remove
+        4 (0.0%)      1 (0.0%)  std::panicking::panicking
+        4 (0.0%)      1 (0.0%)  text_size::size::TextSize::checked_sub::{{closure}}
+        3 (0.0%)      1 (0.0%)  <&str as core::str::pattern::Pattern>::into_searcher
+        3 (0.0%)      1 (0.0%)  <() as core::fmt::Debug>::fmt
+        3 (0.0%)      1 (0.0%)  <DB as ra_hir_def::db::DefDatabase>::crate_def_map
+        3 (0.0%)      1 (0.0%)  <DB as ra_hir_ty::db::HirDatabase>::infer
+        3 (0.0%)      1 (0.0%)  <T as core::any::Any>::type_id
+        3 (0.0%)      1 (0.0%)  <alloc::rc::Rc<T> as alloc::rc::RcBoxPtr<T>>::inner
+        3 (0.0%)      1 (0.0%)  <alloc::string::String as core::convert::From<&str>>::from
+        3 (0.0%)      1 (0.0%)  <alloc::string::String as core::fmt::Write>::write_char
+        3 (0.0%)      1 (0.0%)  <alloc::string::String as core::fmt::Write>::write_str
+        3 (0.0%)      1 (0.0%)  <alloc::vec::ExtendElement<T> as alloc::vec::ExtendWith<T>>::next
+        3 (0.0%)      1 (0.0%)  <chalk_ir::AdtId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::AdtId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::AssocTypeId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::AssocTypeId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ClosureId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ClosureId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Const<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Const<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::DebruijnIndex as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Environment<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Environment<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::FnDefId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::FnDefId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Goal<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::Goal<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ImplId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ImplId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::InferenceVar as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::OpaqueTyId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::OpaqueTyId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauses<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::ProgramClauses<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::TraitId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_ir::TraitId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_ir::UniverseIndex as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyValueBound<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyValueId<I> as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyValueId<I> as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <core::core_arch::x86::__m128i as core::core_arch::x86::m128iExt>::as_m128i
+        3 (0.0%)      1 (0.0%)  <core::hash::BuildHasherDefault<H> as core::hash::BuildHasher>::build_hasher
+        3 (0.0%)      1 (0.0%)  <core::iter::adapters::TakeWhile<I,P> as core::iter::traits::iterator::Iterator>::fold::ok
+        3 (0.0%)      1 (0.0%)  <core::num::NonZeroU32 as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <core::str::Chars as core::iter::traits::iterator::Iterator>::next::{{closure}}
+        3 (0.0%)      1 (0.0%)  <core::str::pattern::MatchOnly as core::str::pattern::TwoWayStrategy>::rejecting
+        3 (0.0%)      1 (0.0%)  <ra_arena::RawId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_db::input::CrateId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_db::input::ProcMacroId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_db::input::SourceRootId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::ConstId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::ConstId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::EnumId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::EnumId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::FunctionId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::FunctionId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::ImplId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::ImplId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::StaticId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::StaticId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::StructId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::StructId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::TraitId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::TraitId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::TypeAliasId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::TypeAliasId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::UnionId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::UnionId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::attr::Attrs as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinFloat as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::builtin_type::BuiltinFloat as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_def::docs::Documentation as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::EagerMacroId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::EagerMacroId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::LazyMacroId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::LazyMacroId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroFile as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_expand::MacroFile as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::FnSig as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::Substs as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::Substs as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::TypeCtorId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::TypeCtorId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::infer::unify::TypeVarId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::primitive::FloatTy as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <ra_hir_ty::primitive::FloatTy as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <ra_tt::TokenId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <rand::rngs::small::SmallRng as rand_core::RngCore>::next_u64
+        3 (0.0%)      1 (0.0%)  <rowan::api::SyntaxNode<L> as core::fmt::Display>::fmt
+        3 (0.0%)      1 (0.0%)  <rowan::green::node::GreenNode as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::write_usize
+        3 (0.0%)      1 (0.0%)  <salsa::intern_id::InternId as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <salsa::intern_id::InternId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <salsa::revision::Revision as core::cmp::PartialEq>::eq
+        3 (0.0%)      1 (0.0%)  <str as alloc::string::ToString>::to_string
+        3 (0.0%)      1 (0.0%)  <str as core::convert::AsRef<str>>::as_ref
+        3 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  <usize as core::iter::range::Step>::backward_unchecked
+        3 (0.0%)      1 (0.0%)  <usize as core::iter::range::Step>::forward_unchecked
+        3 (0.0%)      1 (0.0%)  <usize as core::ops::arith::Add>::add
+        3 (0.0%)      1 (0.0%)  <vfs::FileId as core::hash::Hash>::hash
+        3 (0.0%)      1 (0.0%)  alloc::slice::<impl [T]>::join
+        3 (0.0%)      1 (0.0%)  alloc::slice::<impl alloc::borrow::ToOwned for [T]>::to_owned
+        3 (0.0%)      1 (0.0%)  alloc::vec::from_elem
+        3 (0.0%)      1 (0.0%)  chalk_ir::debug::<impl core::fmt::Debug for chalk_ir::Substitution<I>>::fmt
+        3 (0.0%)      1 (0.0%)  core::alloc::layout::Layout::size
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_load_si128
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_pause
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_set1_epi64x
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_set1_epi8
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_setzero_si128
+        3 (0.0%)      1 (0.0%)  core::core_arch::x86::sse2::_mm_store_si128
+        3 (0.0%)      1 (0.0%)  core::hash::Hasher::write_isize
+        3 (0.0%)      1 (0.0%)  core::hint::spin_loop
+        3 (0.0%)      1 (0.0%)  core::iter::traits::iterator::Iterator::step_by
+        3 (0.0%)      1 (0.0%)  core::ptr::const_ptr::<impl *const T>::wrapping_add
+        3 (0.0%)      1 (0.0%)  core::ptr::mut_ptr::<impl *mut T>::copy_to
+        3 (0.0%)      1 (0.0%)  core::ptr::mut_ptr::<impl *mut T>::read
+        3 (0.0%)      1 (0.0%)  core::slice::<impl [T]>::get_unchecked
+        3 (0.0%)      1 (0.0%)  core::str::from_utf8_unchecked
+        3 (0.0%)      1 (0.0%)  core::str::from_utf8_unchecked_mut
+        3 (0.0%)      1 (0.0%)  core::sync::atomic::spin_loop_hint
+        3 (0.0%)      1 (0.0%)  hashbrown::raw::is_full
+        3 (0.0%)      1 (0.0%)  hashbrown::raw::offset_from
+        3 (0.0%)      1 (0.0%)  hashbrown::raw::special_is_empty
+        3 (0.0%)      1 (0.0%)  indexmap::map::Pos::is_none
+        3 (0.0%)      1 (0.0%)  indexmap::map::usable_capacity
+        3 (0.0%)      1 (0.0%)  ra_ssr::MatchFinder::output_debug_for_nodes_at_range::{{closure}}::{{closure}}
+        3 (0.0%)      1 (0.0%)  ra_ssr::matching::RECORDING_MATCH_FAIL_REASONS::__getit
+        3 (0.0%)      1 (0.0%)  ra_ssr::matching::RECORDING_MATCH_FAIL_REASONS::__init
+        3 (0.0%)      1 (0.0%)  ra_ssr::matching::recording_match_fail_reasons::{{closure}}
+        3 (0.0%)      1 (0.0%)  rand::Rng::gen_range
+        3 (0.0%)      1 (0.0%)  rand::distributions::integer::<impl rand::distributions::Distribution<usize> for rand::distributions::Standard>::sample
+        3 (0.0%)      1 (0.0%)  rowan::api::SyntaxNode<L>::text
+        3 (0.0%)      1 (0.0%)  salsa::Database::salsa_runtime
+        3 (0.0%)      1 (0.0%)  salsa::Database::salsa_runtime_mut
+        3 (0.0%)      1 (0.0%)  salsa::runtime::Runtime::id
+        3 (0.0%)      1 (0.0%)  std::thread::panicking
+        3 (0.0%)      1 (0.0%)  thin_dst::ThinData<Head,SliceItem>::erase
+        3 (0.0%)      1 (0.0%)  thin_dst::ThinData<Head,SliceItem>::len
+        2 (0.0%)      2 (0.0%)  <[T; 1] as smallvec::Array>::size
+        2 (0.0%)      2 (0.0%)  core::ptr::null_mut
+        2 (0.0%)      1 (0.0%)  <&T as core::borrow::Borrow<T>>::borrow
+        2 (0.0%)      1 (0.0%)  <core::sync::atomic::AtomicUsize as parking_lot::elision::AtomicElisionExt>::elision_compare_exchange_acquire
+        2 (0.0%)      1 (0.0%)  <core::sync::atomic::AtomicUsize as parking_lot::elision::AtomicElisionExt>::elision_fetch_sub_release
+        2 (0.0%)      1 (0.0%)  <indexmap::map::Pos as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_db::input::CrateId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_db::input::SourceRootId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::ConstId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::EnumId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::FunctionId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::ImplId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::StaticId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::StructId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::TraitId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::TypeAliasId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_hir_def::UnionId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_parser::FragmentKind as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_parser::syntax_kind::generated::SyntaxKind as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <ra_tt::TokenId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::hash::Hasher>::finish
+        2 (0.0%)      1 (0.0%)  <salsa::durability::Durability as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <salsa::intern_id::InternId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <salsa::revision::Revision as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <std::collections::hash::map::ValuesMut<K,V> as core::iter::traits::iterator::Iterator>::next::{{closure}}
+        2 (0.0%)      1 (0.0%)  <text_size::size::TextSize as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  <usize as core::ops::bit::BitXor>::bitxor
+        2 (0.0%)      1 (0.0%)  <vfs::FileId as core::clone::Clone>::clone
+        2 (0.0%)      1 (0.0%)  core::clone::impls::<impl core::clone::Clone for i32>::clone
+        2 (0.0%)      1 (0.0%)  core::clone::impls::<impl core::clone::Clone for u32>::clone
+        2 (0.0%)      1 (0.0%)  core::clone::impls::<impl core::clone::Clone for u8>::clone
+        2 (0.0%)      1 (0.0%)  core::clone::impls::<impl core::clone::Clone for usize>::clone
+        2 (0.0%)      1 (0.0%)  core::option::Option<&T>::copied::{{closure}}
+        2 (0.0%)      1 (0.0%)  core::str::<impl str>::as_ptr
+        2 (0.0%)      1 (0.0%)  hashbrown::raw::bitmask::BitMask::any_bit_set
+        2 (0.0%)      1 (0.0%)  indexmap::Bucket<K,V>::key_ref
+        2 (0.0%)      1 (0.0%)  indexmap::map::desired_pos
+        2 (0.0%)      1 (0.0%)  indexmap::map::lo32
+        2 (0.0%)      1 (0.0%)  text_size::size::<impl core::convert::From<text_size::size::TextSize> for usize>::from
+        1 (0.0%)      1 (0.0%)  <Borrowed as rand::distributions::uniform::SampleBorrow<Borrowed>>::borrow
+        1 (0.0%)      1 (0.0%)  <[T; 4] as smallvec::Array>::size
+        1 (0.0%)      1 (0.0%)  <alloc::vec::ExtendElement<T> as alloc::vec::ExtendWith<T>>::last
+        1 (0.0%)      1 (0.0%)  <chalk_ir::Void as core::cmp::PartialEq>::eq
+        1 (0.0%)      1 (0.0%)  <chalk_ir::Void as core::hash::Hash>::hash
+        1 (0.0%)      1 (0.0%)  <core::marker::PhantomData<T> as core::clone::Clone>::clone
+        1 (0.0%)      1 (0.0%)  <core::marker::PhantomData<T> as core::hash::Hash>::hash
+        1 (0.0%)      1 (0.0%)  <core::str::pattern::MatchOnly as core::str::pattern::TwoWayStrategy>::use_early_reject
+        1 (0.0%)      1 (0.0%)  <core::str::pattern::RejectAndMatch as core::str::pattern::TwoWayStrategy>::use_early_reject
+        1 (0.0%)      1 (0.0%)  <ra_db::CrateGraphQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_db::FileSourceRootQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_db::FileTextQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_db::ParseQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_db::SourceRootCratesQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_db::SourceRootQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::body::SyntheticSyntax as core::cmp::PartialEq>::eq
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::AttrsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::BodyQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::BodyWithSourceMapQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ConstDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::CrateDefMapQueryQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::CrateLangItemsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::DocumentationQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::EnumDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ExprScopesQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::FunctionDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::GenericParamsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ImplDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ImportMapQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ItemTreeQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::LangItemQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::ModuleLangItemsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::StaticDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::StructDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::TraitDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::TypeAliasDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::db::UnionDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_def::item_tree::Expr as core::cmp::PartialEq>::eq
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::AstIdMapQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::ExpandProcMacroQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::MacroArgQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::MacroDefQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::MacroExpandQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_expand::db::ParseMacroQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::AssociatedTyDataQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::AssociatedTyValueQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::CallableItemSignatureQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::FieldTypesQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::FnDefDatumQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::GenericDefaultsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::GenericPredicatesForParamQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::GenericPredicatesQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ImplDatumQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ImplSelfTyQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ImplTraitQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::InferQueryQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::InherentImplsInCrateQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ProgramClausesForChalkEnvQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ReturnTypeImplTraitsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::StructDatumQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::TraitDatumQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::TraitImplsInCrateQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::TraitImplsInDepsQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::TraitSolveQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::TyQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_hir_ty::db::ValueTyQuery as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <ra_ssr::parsing::NodeKind as core::clone::Clone>::clone
+        1 (0.0%)      1 (0.0%)  <rustc_hash::FxHasher as core::default::Default>::default
+        1 (0.0%)      1 (0.0%)  <u32 as indexmap::map::Size>::is_64_bit
+        1 (0.0%)      1 (0.0%)  <u64 as indexmap::map::Size>::is_64_bit
+        1 (0.0%)      1 (0.0%)  core::cmp::impls::<impl core::cmp::PartialEq for ()>::eq
+        1 (0.0%)      1 (0.0%)  core::hash::impls::<impl core::hash::Hash for ()>::hash
+        1 (0.0%)      1 (0.0%)  core::hint::unreachable_unchecked
+        1 (0.0%)      1 (0.0%)  core::num::<impl u32>::max_value
+        1 (0.0%)      1 (0.0%)  core::num::<impl usize>::max_value
+        1 (0.0%)      1 (0.0%)  core::num::NonZeroUsize::get
+        1 (0.0%)      1 (0.0%)  core::ptr::null
+        1 (0.0%)      1 (0.0%)  core::str::<impl str>::find::{{closure}}
+        1 (0.0%)      1 (0.0%)  core::str::<impl str>::rfind::{{closure}}
+        1 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::AtomicUnit::compare_exchange_weak
+        1 (0.0%)      1 (0.0%)  crossbeam_utils::atomic::atomic_cell::AtomicUnit::load
+        1 (0.0%)      1 (0.0%)  hashbrown::raw::h1
+        1 (0.0%)      1 (0.0%)  indexmap::map::Pos::none
+        1 (0.0%)      1 (0.0%)  parking_lot::elision::have_elision
+        1 (0.0%)      1 (0.0%)  parking_lot_core::parking_lot::deadlock::acquire_resource
+        1 (0.0%)      1 (0.0%)  parking_lot_core::parking_lot::deadlock::release_resource
+        1 (0.0%)      1 (0.0%)  text_size::range::TextRange::end
+        1 (0.0%)      1 (0.0%)  text_size::range::TextRange::start
