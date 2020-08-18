@@ -59,6 +59,13 @@ fn check_types_source_code(ra_fixture: &str) {
 }
 
 fn check_types_impl(ra_fixture: &str, display_source: bool) {
+    // Comment the next line and compare timings for
+    //
+    //     cargo test -p hir_ty -- --exact --nocapture tests::traits::generic_param_env_1
+    //
+    // I get
+    //
+    //     41.86ms vs 14.11ms
     let _tracing = setup_tracing();
     let db = TestDB::with_files(ra_fixture);
     let mut checked_one = false;

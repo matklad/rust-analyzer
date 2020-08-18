@@ -793,6 +793,7 @@ fn test(o: O<S>) {
 
 #[test]
 fn generic_param_env_1() {
+    let _t = stdx::timeit("total");
     check_types(
         r#"
 trait Clone {}
