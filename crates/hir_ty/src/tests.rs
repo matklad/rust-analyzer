@@ -37,9 +37,13 @@ use crate::{
 // against snapshots of the expected results using expect. Use
 // `env UPDATE_EXPECT=1 cargo test -p hir_ty` to update the snapshots.
 
-fn setup_tracing() -> tracing::subscriber::DefaultGuard {
+fn setup_tracing() -> Option<tracing::subscriber::DefaultGuard> {
     use tracing_subscriber::{layer::SubscriberExt, EnvFilter, Registry};
     use tracing_tree::HierarchicalLayer;
+    if std::env::var("CHALK_DEBUG").is_err() {
+        return None;
+    }
+
     let filter = EnvFilter::from_env("CHALK_DEBUG");
     let layer = HierarchicalLayer::default()
         .with_indent_lines(true)
@@ -47,7 +51,7 @@ fn setup_tracing() -> tracing::subscriber::DefaultGuard {
         .with_indent_amount(2)
         .with_writer(std::io::stderr);
     let subscriber = Registry::default().with(filter).with(layer);
-    tracing::subscriber::set_default(subscriber)
+    Some(tracing::subscriber::set_default(subscriber))
 }
 
 fn check_types(ra_fixture: &str) {
