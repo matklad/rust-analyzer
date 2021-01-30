@@ -37,6 +37,7 @@ pub mod algo;
 pub mod ast;
 #[doc(hidden)]
 pub mod fuzz;
+pub mod ted;
 
 use std::{marker::PhantomData, sync::Arc};
 

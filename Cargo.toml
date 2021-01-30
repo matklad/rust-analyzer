@@ -20,7 +20,7 @@ incremental = true
 debug = 0 # Set this to 1 or 2 to get more useful backtraces in debugger.
 
 [patch.'crates-io']
-# rowan = { path = "../rowan" }
+rowan = { git = "https://github.com/matklad/rowan", branch = "clone-for-update", version = "0.12.6" }
 
 # chalk-solve = { path = "../chalk/chalk-solve" }
 # chalk-ir = { path = "../chalk/chalk-ir" }
